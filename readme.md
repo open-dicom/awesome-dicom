@@ -202,6 +202,11 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 
 - [AlizaMS](https://github.com/AlizaMedicalImaging/AlizaMS) - DICOM viewer.
 
+#### Image Computing Platforms
+
+-- [3D Slicer](https://slicer.org) - Free and open source workstation software with tools for many clinical specialies and DICOM datatypes.  Supports visualization, registration, segmentation, time series analysis and much more.
+
+
 ## Contribute
 
 Contributions welcome! Read the [contribution guidelines](contributing.md) first.
