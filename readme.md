@@ -130,6 +130,7 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 - [dwv-react](https://github.com/ivmartel/dwv-react) - Medical viewer using DWV (DICOM Web Viewer) and [React](https://react.dev/).
 - [U Dicom Viewer](https://github.com/webnamics/u-dicom-viewer) - A simple but functional DICOM viewer for any device with a web browser. Allows opening and viewing 2D medical images in a wide variety of DICOM formats.
 - [Viewers](https://github.com/OHIF/Viewers) - The OHIF Viewer is a zero-footprint medical image viewer provided by the Open Health Imaging Foundation (OHIF). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support DICOMWeb.
+- [VolView](https://github.com/Kitware/VolView) - Web based radiological viewer for clinical professionals. Build with Vue and [VTK.js](https://github.com/Kitware/vtk-js).
 
 #### Other
 
