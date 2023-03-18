@@ -178,7 +178,7 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 - [dicom-ecg-plot](https://github.com/marcodebe/dicom-ecg-plot) - Plot ECG data from DICOM ([demo](https://ecg.galliera.it/)).
 - [FSLeyes](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FSLeyes) - A cross-platform visualization tool for [NIfTI](https://nifti.nimh.nih.gov/) and DICOM images.
 - [OnkoDICOM](https://github.com/didymo/OnkoDICOM) - DICOM-RT viewer with enhanced capabilities that make it useful for research in the field of Radiation Oncology. 
-- [MRIcroGL](https://github.com/rordenlab/MRIcroGL) - A cross-platform tool that supports many voxel-based image formats including DICOM. This natively compiled application provides a drag-and-drop user interface as well as Python scripting integration.
+- [MRIcroGL](https://github.com/rordenlab/MRIcroGL) - A cross-platform tool that supports many voxel-based image formats including DICOM. This natively compiled application provides a drag and drop user interface as well as Python scripting integration.
 
 #### Other
 
