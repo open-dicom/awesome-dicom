@@ -39,6 +39,7 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
     - [Machine Learning](#machine-learning)
     - [Validation](#validation)
     - [Visualization](#visualization-4)
+    - [Image Computing Platforms](#image-computing-platforms)
 - [Contribute](#contribute)
 
 
