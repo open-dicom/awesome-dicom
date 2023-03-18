@@ -88,7 +88,7 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 
 #### Other
 
-- [DICOMautomation](https://github.com/hdclark/DICOMautomaton) - DICOMautomaton is a multipurpose tool for analyzing medical physics data with a focus on automation.
+- [DICOMautomaton](https://github.com/hdclark/DICOMautomaton) - DICOMautomaton is a multipurpose tool for analyzing medical physics data with a focus on automation.
 - [dovo](https://github.com/DraconPern/dovo) - Cross-platform software for importing DICOM CD/files and sending to PACS.
 
 ### Go
