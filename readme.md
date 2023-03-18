@@ -204,7 +204,7 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 
 #### Image Computing Platforms
 
--- [3D Slicer](https://slicer.org) - Free and open source workstation software with tools for many clinical specialies and DICOM datatypes.  Supports visualization, registration, segmentation, time series analysis and much more.
+- [3D Slicer](https://slicer.org) - Free and open source workstation software with tools for many clinical specialies and DICOM datatypes.  Supports visualization, registration, segmentation, time series analysis and much more.
 
 
 ## Contribute
