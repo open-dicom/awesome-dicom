@@ -189,7 +189,7 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 
 ### Other/Combination
 
-### Machine Learning
+#### Machine Learning
 
 - [mercure](https://github.com/mercure-imaging/mercure) - A flexible DICOM routing and processing solution with user-friendly web interface and extensive monitoring functions. 
 - [Niffler](https://github.com/Emory-HITI/Niffler) - A lightweight framework to facilitate executing machine learning pipelines and processing workflows on DICOM images and metadata. 
