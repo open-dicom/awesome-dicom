@@ -36,7 +36,7 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
     - [Other](#other-2)
   - [Rust](#rust)
   - [Other/Combination](#othercombination)
-  - [Machine Learning](#machine-learning)
+    - [Machine Learning](#machine-learning)
     - [Validation](#validation)
     - [Visualization](#visualization-4)
 - [Contribute](#contribute)
