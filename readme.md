@@ -129,6 +129,7 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 - [dicomViewerLib](https://github.com/fourctv/dicomViewerLib) - An Angular 9+ DICOMWeb viewer component, based on the [cornerstone.js](https://github.com/cornerstonejs/) project.
 - [DWV](https://github.com/ivmartel/dwv) - DICOM Web Viewer (DWV) is an open source zero footprint medical image viewer library. It uses only JavaScript and HTML5 technologies, meaning that it can be run on any platform that provides a modern browser (laptop, tablet, phone and even modern TVs).
 - [dwv-react](https://github.com/ivmartel/dwv-react) - Medical viewer using DWV and [React](https://react.dev/).
+- [NiiVue](https://github.com/niivue/niivue)  is a WebGL module that can be embedded into HTML, Vue, Angular, React, Electron and Capacitor frameworks. It provides scripting and drag and drop abilities to visualize and render voxel-based images (eg. DICOM, NIfTI), meshes, tractography streamlines and connectomes. [Live demos](https://niivue.github.io/niivue/) illustrate capabilities including [drawing](https://niivue.github.io/niivue/features/cactus.html) functions.
 - [U Dicom Viewer](https://github.com/webnamics/u-dicom-viewer) - A simple but functional DICOM viewer for any device with a web browser. Allows opening and viewing 2D medical images in a wide variety of DICOM formats.
 - [Viewers](https://github.com/OHIF/Viewers) - A zero-footprint medical image viewer provided by the [Open Health Imaging Foundation (OHIF)](https://ohif.org/). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support DICOMWeb.
 
@@ -175,8 +176,9 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 #### Visualization
 
 - [dicom-ecg-plot](https://github.com/marcodebe/dicom-ecg-plot) - Plot ECG data from DICOM ([demo](https://ecg.galliera.it/)).
+- [FSLeyes](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FSLeyes - A Python-based cross-platform visualization tool for NIfTI and DICOM images.
 - [OnkoDICOM](https://github.com/didymo/OnkoDICOM) - DICOM-RT viewer with enhanced capabilities that make it useful for research in the field of Radiation Oncology. 
-- [MRIcroGL](https://github.com/rordenlab/MRIcroGL) - A cross-platform tool for viewing DICOM and [NIfTI](https://nifti.nimh.nih.gov/) format images. It provides a drag-and-drop user interface as well as a scripting language.
+- [MRIcroGL](https://github.com/rordenlab/MRIcroGL) - A cross-platform tool that supports many voxel-based image formats including DICOM. This natively compiled application provides a drag-and-drop user interface as well as Python scripting integration.
 
 #### Other
 
