@@ -10,7 +10,6 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 
 ## Contents
 
-- [Contents](#contents)
 - [Learning Resources](#learning-resources)
 - [Libraries](#libraries)
   - [C#](#c)
@@ -95,7 +94,7 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 - [cornerstoneWADOImageLoader](https://github.com/cornerstonejs/cornerstoneWADOImageLoader) - A [cornerstone.js](https://github.com/cornerstonejs/) Image Loader for DICOM P10 instances over HTTP (WADO-URI) or DICOMWeb (WADO-RS). This can be used to integrate cornerstone with WADO-URI servers, DICOMWeb servers or any other HTTP based server that returns DICOM P10 instances (e.g., Orthanc or custom servers).
 - [Daikon](https://github.com/rii-mango/Daikon) - A pure JavaScript DICOM reader.
 - [dcmjs](https://github.com/dcmjs-org/dcmjs) - JavaScript implementation of DICOM manipulation. This code is an outgrowth of several efforts to implement web applications for medical imaging.
-- [dicomParser](https://github.com/cornerstonejs/dicomParser) - cornerstone.js' lightweight library for parsing DICOM P10 byte streams, as well as raw (not encapsulated in part 10) byte streams, in modern HTML5 based web browsers (IE10+), Node.js and Meteor.
+- [dicomParser](https://github.com/cornerstonejs/dicomParser) - Cornerstone.js' lightweight library for parsing DICOM P10 byte streams, as well as raw (not encapsulated in part 10) byte streams, in modern HTML5 based web browsers (IE10+), Node.js and Meteor.
 - [dicomweb-client](https://github.com/dcmjs-org/dicomweb-client) - JavaScript client implementation of DICOMWeb.
 - [dicomweb-pacs](https://github.com/knopkem/dicomweb-pacs) - Easy to use DICOMWeb enabled PACS with DIMSE services based on sqlite database.
 - [dicomweb-server](https://github.com/dcmjs-org/dicomweb-server) - Lightweight DICOMWeb Server with CouchDB.
