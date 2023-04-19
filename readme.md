@@ -110,10 +110,12 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 - [dicomViewerLib](https://github.com/fourctv/dicomViewerLib) - An Angular 9+ DICOMWeb viewer component, based on the cornerstone.js project.
 - [DWV](https://github.com/ivmartel/dwv) - DICOM Web Viewer (DWV) is an open source zero footprint medical image viewer library. It uses only JavaScript and HTML5 technologies, meaning that it can be run on any platform that provides a modern browser (laptop, tablet, phone and even modern TVs).
 - [dwv-react](https://github.com/ivmartel/dwv-react) - Medical viewer using DWV and [React](https://react.dev/).
+- [NiiVue](https://github.com/niivue/niivue) - A WebGL module that can be embedded into HTML, Vue.js, Angular, React, Electron and Capacitor frameworks. It provides scripting and drag and drop abilities to visualize and render voxel-based images (e.g., DICOM and [NIfTI](https://nifti.nimh.nih.gov/)), meshes, and tractography streamlines and connectomes, as well as drawing functions ([demos](https://niivue.github.io/niivue/)).
 - [U Dicom Viewer](https://github.com/webnamics/u-dicom-viewer) - A simple but functional DICOM viewer for any device with a web browser. Allows opening and viewing 2D medical images in a wide variety of DICOM formats.
 - [Viewers](https://github.com/OHIF/Viewers) - A zero-footprint medical image viewer provided by the [Open Health Imaging Foundation (OHIF)](https://ohif.org/). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support DICOMWeb.
 - [dcmjs-imaging](https://github.com/PantelisGeorgiadis/dcmjs-imaging) - DICOM image and overlay rendering pipeline for Node.js and browser using the dcmjs library.
 - [dcmjs-ecg](https://github.com/PantelisGeorgiadis/dcmjs-ecg) - DICOM electrocardiography (ECG) rendering for Node.js and browser using dcmjs.
+- [VolView](https://github.com/Kitware/VolView) - Web based radiological viewer for clinical professionals. Built with [Vue.js](https://vuejs.org/) and [VTK.js](https://github.com/Kitware/vtk-js).
 
 #### Other
 
@@ -160,6 +162,9 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 - [dicom-ecg-plot](https://github.com/marcodebe/dicom-ecg-plot) - Plot ECG data from DICOM ([demo](https://ecg.galliera.it/)).
 - [OnkoDICOM](https://github.com/didymo/OnkoDICOM) - DICOM-RT viewer with enhanced capabilities that make it useful for research in the field of Radiation Oncology.
 - [MRIcroGL](https://github.com/rordenlab/MRIcroGL) - A cross-platform tool for viewing DICOM and NIfTI format images. It provides a drag-and-drop user interface as well as a scripting language.
+- [FSLeyes](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FSLeyes) - A cross-platform visualization tool for [NIfTI](https://nifti.nimh.nih.gov/) and DICOM images.
+- [OnkoDICOM](https://github.com/didymo/OnkoDICOM) - DICOM-RT viewer with enhanced capabilities that make it useful for research in the field of Radiation Oncology. 
+- [MRIcroGL](https://github.com/rordenlab/MRIcroGL) - A cross-platform tool that supports many voxel-based image formats including DICOM. This natively compiled application provides a drag and drop user interface as well as Python scripting integration.
 
 #### Other
 
