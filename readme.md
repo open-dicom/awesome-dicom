@@ -1,4 +1,5 @@
 <!-- omit in toc -->
+
 # Awesome DICOM [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 > A curated list of awesome DICOM resources and libraries.
@@ -6,42 +7,22 @@
 The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international standard for medical images and related information. It defines the formats for medical images that can be exchanged with the data and quality necessary for clinical use <sup>[[source](https://www.dicomstandard.org/about-home)]</sup>.
 
 <!-- omit in toc -->
+
 ## Contents
 
+- [Contents](#contents)
 - [Learning Resources](#learning-resources)
 - [Libraries](#libraries)
   - [C#](#c)
-    - [General](#general)
-    - [Visualization](#visualization)
   - [C++](#c-1)
-    - [General](#general-1)
-    - [Conversion](#conversion)
-    - [Other](#other)
   - [Go](#go)
   - [Java](#java)
-    - [General](#general-2)
-    - [Visualization](#visualization-1)
   - [JavaScript](#javascript)
-    - [General](#general-3)
-    - [Visualization](#visualization-2)
-    - [Other](#other-1)
   - [MATLAB](#matlab)
-    - [Conversion](#conversion-1)
   - [Python](#python)
-    - [General](#general-4)
-    - [Conversion](#conversion-2)
-    - [Anonymization](#anonymization)
-    - [Sorting](#sorting)
-    - [Visualization](#visualization-3)
-    - [Other](#other-2)
   - [Rust](#rust)
   - [Other/Combination](#othercombination)
-    - [Machine Learning](#machine-learning)
-    - [Validation](#validation)
-    - [Visualization](#visualization-4)
-    - [Image Computing Platforms](#image-computing-platforms)
 - [Contribute](#contribute)
-
 
 ## Learning Resources
 
@@ -58,7 +39,7 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 
 #### General
 
-- [dicom-server](https://github.com/microsoft/dicom-server) - The Medical Imaging Server for DICOM is an open source DICOM server that is easily deployed on Azure. 
+- [dicom-server](https://github.com/microsoft/dicom-server) - The Medical Imaging Server for DICOM is an open source DICOM server that is easily deployed on Azure.
 - [DICOMcloud](https://github.com/DICOMcloud/DICOMcloud) - A standalone DICOMWeb server with RESTful implementation of the DICOMWeb/WADO services. The DICOMcloud server can interface with any DICOMWeb client over the current implemented features (qido-rs, wado-uri, wado-rs and stow-rs).
 - [Evil-DICOM](https://github.com/rexcardan/Evil-DICOM) - A simple to use library for reading and manipulating DICOM files.
 - [fo-dicom](https://github.com/fo-dicom/fo-dicom) - Fellow Oak DICOM, a DICOM toolkit in C# for all .NET Standard 2.0 compatible frameworks.
@@ -83,7 +64,7 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 #### Conversion
 
 - [dcm2niix](https://github.com/rordenlab/dcm2niix) - Convert neuroimaging data from the DICOM format to the [NIfTI](https://nifti.nimh.nih.gov/) format.
-- [DicomToMesh](https://github.com/AOT-AG/DicomToMesh) - A command line tool to transform a DICOM volume into a 3d surface mesh (*obj*, *stl* or *ply*). Several mesh processing routines can be enabled, such as mesh reduction, smoothing or cleaning.
+- [DicomToMesh](https://github.com/AOT-AG/DicomToMesh) - A command line tool to transform a DICOM volume into a 3d surface mesh (_obj_, _stl_ or _ply_). Several mesh processing routines can be enabled, such as mesh reduction, smoothing or cleaning.
 - [wsi-to-dicom-converter](https://github.com/GoogleCloudPlatform/wsi-to-dicom-converter) - Convert whole slide images (WSIs) to DICOM.
 
 #### Other
@@ -99,7 +80,7 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 
 #### General
 
-- [dcm4che](https://github.com/dcm4che/dcm4che) - A collection of open source applications and utilities for the healthcare enterprise. 
+- [dcm4che](https://github.com/dcm4che/dcm4che) - A collection of open source applications and utilities for the healthcare enterprise.
 - [Dicoogle](https://github.com/bioinformatics-ua/dicoogle) - An extensible, platform-independent and open-source PACS archive software that replaces the traditional centralized database with a more agile indexing and retrieval mechanism.
 - [healthcare-dicom-dicomweb-adapter](https://github.com/GoogleCloudPlatform/healthcare-dicom-dicomweb-adapter) - A set of components that translate between traditional DICOM DIMSE protocols (e.g., C-STORE) and the RESTful DICOMWeb protocols (e.g., STOW-RS).
 
@@ -145,7 +126,7 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 
 - [dicm2nii](https://github.com/xiangruili/dicm2nii) - Convert DICOM into [NIfTI](https://nifti.nimh.nih.gov/). It can also convert PAR/XML/REC, HEAD/BRIK, MGZ and BrainVoyager files into NIfTI.
 
-### Python 
+### Python
 
 #### General
 
@@ -153,15 +134,15 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 - [dicomweb-client](https://github.com/ImagingDataCommons/dicomweb-client) - Provides client interfaces for DICOMWeb RESTful services QIDO-RS, WADO-RS and STOW-RS to search, retrieve and store DICOM objects over the web, respectively.
 - [highdicom](https://github.com/ImagingDataCommons/highdicom) - Provides high-level DICOM abstractions for the Python programming language to facilitate the creation and handling of DICOM objects for image-derived information, including image annotations, and image analysis results.
 - [MedPy](https://github.com/loli/medpy) - An image processing library and collection of scripts targeted towards medical (i.e. high dimensional) image processing.
-- [pydicom](https://github.com/pydicom/pydicom) - A pure Python package for working with DICOM files. It lets you read, modify and write DICOM data in an easy "pythonic" way. 
-- [pynetdicom](https://github.com/pydicom/pynetdicom) - A pure Python 3.7+ package that implements the DICOM networking protocol. Working with *pydicom*, it allows the easy creation of DICOM Service Class Users (SCUs) and Service Class Providers (SCPs).
+- [pydicom](https://github.com/pydicom/pydicom) - A pure Python package for working with DICOM files. It lets you read, modify and write DICOM data in an easy "pythonic" way.
+- [pynetdicom](https://github.com/pydicom/pynetdicom) - A pure Python 3.7+ package that implements the DICOM networking protocol. Working with _pydicom_, it allows the easy creation of DICOM Service Class Users (SCUs) and Service Class Providers (SCPs).
 
 #### Conversion
 
 - [bidskit](https://github.com/jmtyszka/bidskit) - CLI for converting a directory of DICOM files into a [BIDS](https://bids.neuroimaging.io/)-compliant dataset.
 - [dcmstack](https://github.com/moloney/dcmstack) - DICOM to [NIfTI](https://nifti.nimh.nih.gov/) conversion with the added ability to extract and summarize metadata from the source files.
 - [dicom2nifti](https://github.com/icometrix/dicom2nifti) - Convert MR and CT-derived DICOM files to [NIfTI](https://nifti.nimh.nih.gov/).
-- [dicom2stl](https://github.com/dave3d/dicom2stl) - Convert a DICOM series to an [STL](https://en.wikipedia.org/wiki/STL_(file_format)) surface mesh.
+- [dicom2stl](https://github.com/dave3d/dicom2stl) - Convert a DICOM series to an [STL](<https://en.wikipedia.org/wiki/STL_(file_format)>) surface mesh.
 - [Dicomifier](https://github.com/lamyj/dicomifier) - A set of tools to convert Bruker data to DICOM files, and DICOM files to [NIfTI](https://nifti.nimh.nih.gov/).
 - [heudiconv](https://github.com/nipy/heudiconv) - A flexible DICOM converter for organizing brain imaging data into structured directory layouts.
 
@@ -178,7 +159,7 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 #### Visualization
 
 - [dicom-ecg-plot](https://github.com/marcodebe/dicom-ecg-plot) - Plot ECG data from DICOM ([demo](https://ecg.galliera.it/)).
-- [OnkoDICOM](https://github.com/didymo/OnkoDICOM) - DICOM-RT viewer with enhanced capabilities that make it useful for research in the field of Radiation Oncology. 
+- [OnkoDICOM](https://github.com/didymo/OnkoDICOM) - DICOM-RT viewer with enhanced capabilities that make it useful for research in the field of Radiation Oncology.
 - [MRIcroGL](https://github.com/rordenlab/MRIcroGL) - A cross-platform tool for viewing DICOM and [NIfTI](https://nifti.nimh.nih.gov/) format images. It provides a drag-and-drop user interface as well as a scripting language.
 
 #### Other
@@ -195,12 +176,12 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 
 #### Machine Learning
 
-- [mercure](https://github.com/mercure-imaging/mercure) - A flexible DICOM routing and processing solution with user-friendly web interface and extensive monitoring functions. 
-- [Niffler](https://github.com/Emory-HITI/Niffler) - A lightweight framework to facilitate executing machine learning pipelines and processing workflows on DICOM images and metadata. 
+- [mercure](https://github.com/mercure-imaging/mercure) - A flexible DICOM routing and processing solution with user-friendly web interface and extensive monitoring functions.
+- [Niffler](https://github.com/Emory-HITI/Niffler) - A lightweight framework to facilitate executing machine learning pipelines and processing workflows on DICOM images and metadata.
 
 #### Validation
 
-- [DVTk](https://github.com/dvtk-org/DVTk) - Testing, validating and diagnosing DICOM communication in medical environments. 
+- [DVTk](https://github.com/dvtk-org/DVTk) - Testing, validating and diagnosing DICOM communication in medical environments.
 
 #### Visualization
 
@@ -209,7 +190,6 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 #### Image Computing Platforms
 
 - [3D Slicer](https://slicer.org) - Free and open source workstation software with tools for many clinical specialies and DICOM datatypes. Supports visualization, registration, segmentation, time series analysis and much more.
-
 
 ## Contribute
 
