@@ -91,10 +91,10 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 
 #### General
 
-- [cornerstoneWADOImageLoader](https://github.com/cornerstonejs/cornerstoneWADOImageLoader) - A [cornerstone.js](https://github.com/cornerstonejs/) Image Loader for DICOM P10 instances over HTTP (WADO-URI) or DICOMWeb (WADO-RS). This can be used to integrate cornerstone with WADO-URI servers, DICOMWeb servers or any other HTTP based server that returns DICOM P10 instances (e.g., Orthanc or custom servers).
+- [cornerstoneWADOImageLoader](https://tinyurl.com/bcdb4bxa) - A [cornerstone.js](https://github.com/cornerstonejs/) Image Loader for DICOM P10 instances over HTTP (WADO-URI) or DICOMWeb (WADO-RS). This can be used to integrate cornerstone with WADO-URI servers, DICOMWeb servers or any other HTTP based server that returns DICOM P10 instances (e.g., Orthanc or custom servers).
 - [Daikon](https://github.com/rii-mango/Daikon) - A pure JavaScript DICOM reader.
 - [dcmjs](https://github.com/dcmjs-org/dcmjs) - JavaScript implementation of DICOM manipulation. This code is an outgrowth of several efforts to implement web applications for medical imaging.
-- [dicomParser](https://github.com/cornerstonejs/dicomParser) - Cornerstone.js' lightweight library for parsing DICOM P10 byte streams, as well as raw (not encapsulated in part 10) byte streams, in modern HTML5 based web browsers (IE10+), Node.js and Meteor.
+- [dicomParser](https://tinyurl.com/mr39unuk) - Cornerstone.js' lightweight library for parsing DICOM P10 byte streams, as well as raw (not encapsulated in part 10) byte streams, in modern HTML5 based web browsers (IE10+), Node.js and Meteor.
 - [dicomweb-client](https://github.com/dcmjs-org/dicomweb-client) - JavaScript client implementation of DICOMWeb.
 - [dicomweb-pacs](https://github.com/knopkem/dicomweb-pacs) - Easy to use DICOMWeb enabled PACS with DIMSE services based on sqlite database.
 - [dicomweb-server](https://github.com/dcmjs-org/dicomweb-server) - Lightweight DICOMWeb Server with CouchDB.
@@ -103,7 +103,7 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 #### Visualization
 
 - [bluelight](https://github.com/cylab-tw/bluelight) - Browser-based medical image viewer primarily maintained by the [Imaging Informatics Labs](https://cylab.dicom.tw/). It is a pure single-page application (SPA), lightweight, and using only JavaScript and HTML5 technologies to easily deploy it on any HTTP server.
-- [cornerstone](https://github.com/cornerstonejs/cornerstone) - A complete web based medical imaging platform. This repository contains the [cornerstone.js](https://github.com/cornerstonejs) "Core" component which is a lightweight JavaScript library for displaying medical images in modern web browsers that support the HTML5 canvas element.
+- [cornerstone](https://tinyurl.com/2p85awt3) - A complete web based medical imaging platform. This repository contains the [cornerstone.js](https://github.com/cornerstonejs) "Core" component which is a lightweight JavaScript library for displaying medical images in modern web browsers that support the HTML5 canvas element.
 - [dicom.ts](https://github.com/wearemothership/dicom.ts) - A small, superfast JS DICOM renderer.
 - [dicom-microscopy-viewer](https://github.com/ImagingDataCommons/dicom-microscopy-viewer) - Vanilla JS library for web-based visualization of DICOM VL Whole Slide Microscopy Image datasets and derived information.
 - [dicomviewer](https://github.com/ayselafsar/dicomviewer) - A DICOM viewer which uses the [cornerstone.js](https://github.com/cornerstonejs) library to display DICOM files in Nextcloud.
