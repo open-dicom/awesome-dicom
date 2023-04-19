@@ -95,7 +95,7 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 - [cornerstoneWADOImageLoader](https://github.com/cornerstonejs/cornerstoneWADOImageLoader) - A [cornerstone.js](https://github.com/cornerstonejs/) Image Loader for DICOM P10 instances over HTTP (WADO-URI) or DICOMWeb (WADO-RS). This can be used to integrate cornerstone with WADO-URI servers, DICOMWeb servers or any other HTTP based server that returns DICOM P10 instances (e.g., Orthanc or custom servers).
 - [Daikon](https://github.com/rii-mango/Daikon) - A pure JavaScript DICOM reader.
 - [dcmjs](https://github.com/dcmjs-org/dcmjs) - JavaScript implementation of DICOM manipulation. This code is an outgrowth of several efforts to implement web applications for medical imaging.
-- [dicomParser](https://github.com/cornerstonejs/dicomParser) - [cornerstone.js](https://github.com/cornerstonejs/)'s lightweight library for parsing DICOM P10 byte streams, as well as raw (not encapsulated in part 10) byte streams, in modern HTML5 based web browsers (IE10+), Node.js and Meteor.
+- [dicomParser](https://github.com/cornerstonejs/dicomParser) - cornerstone.js' lightweight library for parsing DICOM P10 byte streams, as well as raw (not encapsulated in part 10) byte streams, in modern HTML5 based web browsers (IE10+), Node.js and Meteor.
 - [dicomweb-client](https://github.com/dcmjs-org/dicomweb-client) - JavaScript client implementation of DICOMWeb.
 - [dicomweb-pacs](https://github.com/knopkem/dicomweb-pacs) - Easy to use DICOMWeb enabled PACS with DIMSE services based on sqlite database.
 - [dicomweb-server](https://github.com/dcmjs-org/dicomweb-server) - Lightweight DICOMWeb Server with CouchDB.
@@ -108,7 +108,7 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 - [dicom.ts](https://github.com/wearemothership/dicom.ts) - A small, superfast JS DICOM renderer.
 - [dicom-microscopy-viewer](https://github.com/ImagingDataCommons/dicom-microscopy-viewer) - Vanilla JS library for web-based visualization of DICOM VL Whole Slide Microscopy Image datasets and derived information.
 - [dicomviewer](https://github.com/ayselafsar/dicomviewer) - A DICOM viewer which uses the [cornerstone.js](https://github.com/cornerstonejs) library to display DICOM files in Nextcloud.
-- [dicomViewerLib](https://github.com/fourctv/dicomViewerLib) - An Angular 9+ DICOMWeb viewer component, based on the [cornerstone.js](https://github.com/cornerstonejs/) project.
+- [dicomViewerLib](https://github.com/fourctv/dicomViewerLib) - An Angular 9+ DICOMWeb viewer component, based on the cornerstone.js project.
 - [DWV](https://github.com/ivmartel/dwv) - DICOM Web Viewer (DWV) is an open source zero footprint medical image viewer library. It uses only JavaScript and HTML5 technologies, meaning that it can be run on any platform that provides a modern browser (laptop, tablet, phone and even modern TVs).
 - [dwv-react](https://github.com/ivmartel/dwv-react) - Medical viewer using DWV and [React](https://react.dev/).
 - [U Dicom Viewer](https://github.com/webnamics/u-dicom-viewer) - A simple but functional DICOM viewer for any device with a web browser. Allows opening and viewing 2D medical images in a wide variety of DICOM formats.
@@ -124,7 +124,7 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 
 #### Conversion
 
-- [dicm2nii](https://github.com/xiangruili/dicm2nii) - Convert DICOM into [NIfTI](https://nifti.nimh.nih.gov/). It can also convert PAR/XML/REC, HEAD/BRIK, MGZ and BrainVoyager files into NIfTI.
+- [dicm2nii](https://github.com/xiangruili/dicm2nii) - Convert DICOM into NIfTI. It can also convert PAR/XML/REC, HEAD/BRIK, MGZ and BrainVoyager files into NIfTI.
 
 ### Python
 
@@ -140,10 +140,10 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 #### Conversion
 
 - [bidskit](https://github.com/jmtyszka/bidskit) - CLI for converting a directory of DICOM files into a [BIDS](https://bids.neuroimaging.io/)-compliant dataset.
-- [dcmstack](https://github.com/moloney/dcmstack) - DICOM to [NIfTI](https://nifti.nimh.nih.gov/) conversion with the added ability to extract and summarize metadata from the source files.
-- [dicom2nifti](https://github.com/icometrix/dicom2nifti) - Convert MR and CT-derived DICOM files to [NIfTI](https://nifti.nimh.nih.gov/).
+- [dcmstack](https://github.com/moloney/dcmstack) - DICOM to NIfTI conversion with the added ability to extract and summarize metadata from the source files.
+- [dicom2nifti](https://github.com/icometrix/dicom2nifti) - Convert MR and CT-derived DICOM files to NIfTI.
 - [dicom2stl](https://github.com/dave3d/dicom2stl) - Convert a DICOM series to an [STL](<https://en.wikipedia.org/wiki/STL_(file_format)>) surface mesh.
-- [Dicomifier](https://github.com/lamyj/dicomifier) - A set of tools to convert Bruker data to DICOM files, and DICOM files to [NIfTI](https://nifti.nimh.nih.gov/).
+- [Dicomifier](https://github.com/lamyj/dicomifier) - A set of tools to convert Bruker data to DICOM files, and DICOM files to NIfTI.
 - [heudiconv](https://github.com/nipy/heudiconv) - A flexible DICOM converter for organizing brain imaging data into structured directory layouts.
 
 #### Anonymization
@@ -160,11 +160,11 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 
 - [dicom-ecg-plot](https://github.com/marcodebe/dicom-ecg-plot) - Plot ECG data from DICOM ([demo](https://ecg.galliera.it/)).
 - [OnkoDICOM](https://github.com/didymo/OnkoDICOM) - DICOM-RT viewer with enhanced capabilities that make it useful for research in the field of Radiation Oncology.
-- [MRIcroGL](https://github.com/rordenlab/MRIcroGL) - A cross-platform tool for viewing DICOM and [NIfTI](https://nifti.nimh.nih.gov/) format images. It provides a drag-and-drop user interface as well as a scripting language.
+- [MRIcroGL](https://github.com/rordenlab/MRIcroGL) - A cross-platform tool for viewing DICOM and NIfTI format images. It provides a drag-and-drop user interface as well as a scripting language.
 
 #### Other
 
-- [dcmrtstruct2nii](https://github.com/Sikerdebaard/dcmrtstruct2nii) - DICOM RT-Struct to nii-mask. This is a naïve approach to rasterizing rt-struct to masks in the [NIfTI](https://nifti.nimh.nih.gov/) format.
+- [dcmrtstruct2nii](https://github.com/Sikerdebaard/dcmrtstruct2nii) - DICOM RT-Struct to nii-mask. This is a naïve approach to rasterizing rt-struct to masks in the NIfTI format.
 - [dicom-numpy](https://github.com/innolitics/dicom-numpy) - A set of utilities for extracting data contained in DICOM files into Numpy ndarrays.
 - [dicom-standard](https://github.com/innolitics/dicom-standard) - Parses the web version of the DICOM Standard into human and machine-friendly JSON files.
 
