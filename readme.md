@@ -94,27 +94,27 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 - [cornerstoneWADOImageLoader](https://tinyurl.com/bcdb4bxa) - A [cornerstone.js](https://github.com/cornerstonejs/) Image Loader for DICOM P10 instances over HTTP (WADO-URI) or DICOMWeb (WADO-RS). This can be used to integrate cornerstone with WADO-URI servers, DICOMWeb servers or any other HTTP based server that returns DICOM P10 instances (e.g., Orthanc or custom servers).
 - [Daikon](https://github.com/rii-mango/Daikon) - A pure JavaScript DICOM reader.
 - [dcmjs](https://github.com/dcmjs-org/dcmjs) - JavaScript implementation of DICOM manipulation. This code is an outgrowth of several efforts to implement web applications for medical imaging.
+- [dcmjs-dimse](https://github.com/PantelisGeorgiadis/dcmjs-dimse) - DICOM DIMSE implementation for Node.js using the dcmjs library.
 - [dicomParser](https://tinyurl.com/mr39unuk) - Cornerstone.js' lightweight library for parsing DICOM P10 byte streams, as well as raw (not encapsulated in part 10) byte streams, in modern HTML5 based web browsers (IE10+), Node.js and Meteor.
 - [dicomweb-client](https://github.com/dcmjs-org/dicomweb-client) - JavaScript client implementation of DICOMWeb.
 - [dicomweb-pacs](https://github.com/knopkem/dicomweb-pacs) - Easy to use DICOMWeb enabled PACS with DIMSE services based on sqlite database.
 - [dicomweb-server](https://github.com/dcmjs-org/dicomweb-server) - Lightweight DICOMWeb Server with CouchDB.
-- [dcmjs-dimse](https://github.com/PantelisGeorgiadis/dcmjs-dimse) - DICOM DIMSE implementation for Node.js using the dcmjs library.
 
 #### Visualization
 
 - [bluelight](https://github.com/cylab-tw/bluelight) - Browser-based medical image viewer primarily maintained by the [Imaging Informatics Labs](https://cylab.dicom.tw/). It is a pure single-page application (SPA), lightweight, and using only JavaScript and HTML5 technologies to easily deploy it on any HTTP server.
 - [cornerstone](https://tinyurl.com/2p85awt3) - A complete web based medical imaging platform. This repository contains the cornerstone.js "Core" component which is a lightweight JavaScript library for displaying medical images in modern web browsers that support the HTML5 canvas element.
+- [dcmjs-imaging](https://github.com/PantelisGeorgiadis/dcmjs-imaging) - DICOM image and overlay rendering pipeline for Node.js and browser using the dcmjs library.
+- [dcmjs-ecg](https://github.com/PantelisGeorgiadis/dcmjs-ecg) - DICOM electrocardiography (ECG) rendering for Node.js and browser using dcmjs.
 - [dicom.ts](https://github.com/wearemothership/dicom.ts) - A small, superfast JS DICOM renderer.
 - [dicom-microscopy-viewer](https://github.com/ImagingDataCommons/dicom-microscopy-viewer) - Vanilla JS library for web-based visualization of DICOM VL Whole Slide Microscopy Image datasets and derived information.
 - [dicomviewer](https://github.com/ayselafsar/dicomviewer) - A DICOM viewer which uses the cornerstone.js library to display DICOM files in Nextcloud.
 - [dicomViewerLib](https://github.com/fourctv/dicomViewerLib) - An Angular 9+ DICOMWeb viewer component, based on the cornerstone.js project.
 - [DWV](https://github.com/ivmartel/dwv) - DICOM Web Viewer (DWV) is an open source zero footprint medical image viewer library. It uses only JavaScript and HTML5 technologies, meaning that it can be run on any platform that provides a modern browser (laptop, tablet, phone and even modern TVs).
 - [dwv-react](https://github.com/ivmartel/dwv-react) - Medical viewer using DWV and [React](https://react.dev/).
-- [NiiVue](https://github.com/niivue/niivue) - A WebGL module that can be embedded into HTML, Vue.js, Angular, React, Electron and Capacitor frameworks. It provides scripting and drag and drop abilities to visualize and render voxel-based images (e.g., DICOM and [NIfTI](https://nifti.nimh.nih.gov/)), meshes, and tractography streamlines and connectomes, as well as drawing functions ([demos](https://niivue.github.io/niivue/)).
+- [NiiVue](https://github.com/niivue/niivue) - A WebGL module that can be embedded into HTML, Vue.js, Angular, React, Electron and Capacitor frameworks. It provides scripting and drag and drop abilities to visualize and render voxel-based images (e.g., DICOM and NIfTI), meshes, and tractography streamlines and connectomes, as well as drawing functions ([demos](https://niivue.github.io/niivue/)).
 - [U Dicom Viewer](https://github.com/webnamics/u-dicom-viewer) - A simple but functional DICOM viewer for any device with a web browser. Allows opening and viewing 2D medical images in a wide variety of DICOM formats.
 - [Viewers](https://github.com/OHIF/Viewers) - A zero-footprint medical image viewer provided by the [Open Health Imaging Foundation (OHIF)](https://ohif.org/). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support DICOMWeb.
-- [dcmjs-imaging](https://github.com/PantelisGeorgiadis/dcmjs-imaging) - DICOM image and overlay rendering pipeline for Node.js and browser using the dcmjs library.
-- [dcmjs-ecg](https://github.com/PantelisGeorgiadis/dcmjs-ecg) - DICOM electrocardiography (ECG) rendering for Node.js and browser using dcmjs.
 - [VolView](https://github.com/Kitware/VolView) - Web based radiological viewer for clinical professionals. Built with [Vue.js](https://vuejs.org/) and [VTK.js](https://github.com/Kitware/vtk-js).
 
 #### Other
@@ -160,11 +160,9 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 #### Visualization
 
 - [dicom-ecg-plot](https://github.com/marcodebe/dicom-ecg-plot) - Plot ECG data from DICOM ([demo](https://ecg.galliera.it/)).
-- [OnkoDICOM](https://github.com/didymo/OnkoDICOM) - DICOM-RT viewer with enhanced capabilities that make it useful for research in the field of Radiation Oncology.
-- [MRIcroGL](https://github.com/rordenlab/MRIcroGL) - A cross-platform tool for viewing DICOM and NIfTI format images. It provides a drag-and-drop user interface as well as a scripting language.
-- [FSLeyes](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FSLeyes) - A cross-platform visualization tool for [NIfTI](https://nifti.nimh.nih.gov/) and DICOM images.
-- [OnkoDICOM](https://github.com/didymo/OnkoDICOM) - DICOM-RT viewer with enhanced capabilities that make it useful for research in the field of Radiation Oncology. 
+- [FSLeyes](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FSLeyes) - A cross-platform visualization tool for NIfTI and DICOM images.
 - [MRIcroGL](https://github.com/rordenlab/MRIcroGL) - A cross-platform tool that supports many voxel-based image formats including DICOM. This natively compiled application provides a drag and drop user interface as well as Python scripting integration.
+- [OnkoDICOM](https://github.com/didymo/OnkoDICOM) - DICOM-RT viewer with enhanced capabilities that make it useful for research in the field of Radiation Oncology.
 
 #### Other
 
