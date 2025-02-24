@@ -26,7 +26,7 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 
 ## Datasets
 - [The Cancer Imaging Archive (TCIA)](https://www.cancerimagingarchive.net/) - Freely available radiology and pathology cancer imaging datasets. 
-- [Imaging Data Commons (IDC)](https://datacommons.cancer.gov/repository/imaging-data-commons) - A cloud-based repository of publicly available cancer imaging data co-located with the analysis and exploration tools and resources.  Many datasets are mirrored from TCIA.
+- [Imaging Data Commons (IDC)](https://datacommons.cancer.gov/repository/imaging-data-commons) - A cloud-based repository of publicly available cancer imaging data. Includes radiology, digital pathology, analysis results all in DICOM format. Mirrors all public radiology DICOM collections available in TCIA.
 - [Medical Imaging and Data Resource Center (MIDRC)](https://www.midrc.org/) - This archive contains DICOM imaging for over 67,000 COVID-19 subjects.
 
 ## Learning Resources
