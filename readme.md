@@ -105,6 +105,7 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 - [dicomweb-client](https://github.com/dcmjs-org/dicomweb-client) - JavaScript client implementation of DICOMWeb.
 - [dicomweb-pacs](https://github.com/knopkem/dicomweb-pacs) - Easy to use DICOMWeb enabled PACS with DIMSE services based on sqlite database.
 - [dicomweb-server](https://github.com/dcmjs-org/dicomweb-server) - Lightweight DICOMWeb Server with CouchDB.
+- [Efferent.Dicom](https://github.com/Efferent-Health/Dicom) - Ligthweight JS/TS/Node library for reading and writing DICOM files 
 
 #### Visualization
 
