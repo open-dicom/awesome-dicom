@@ -157,6 +157,7 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 
 #### Anonymization
 
+- [dcm-anon](https://github.com/Ces107/dcm-anon) - PS3.15 Basic Profile anonymizer that emits a hash-chained GDPR/HIPAA compliance manifest and an independent post-run residual-PHI scan.
 - [deid](https://github.com/pydicom/deid) - Best effort anonymization for medical images in Python.
 - [DICAT](https://github.com/aces/DICAT) - A simple graphical tool that facilitates DICOM de-identification directly on a local workstation.
 - [dicom-anonymizer](https://github.com/KitwareMedical/dicom-anonymizer) - A tool for anonymizing DICOM files according to the DICOM standard.
