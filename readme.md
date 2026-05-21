@@ -187,6 +187,7 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 
 #### Machine Learning
 
+- [MedCheck](https://github.com/Liohtml/MedCheck) - AI-powered medical imaging analysis toolkit. Analyze MRI scans with local ML models and Vision-LLMs (Claude, GPT, Gemini). Docker-ready.
 - [mercure](https://github.com/mercure-imaging/mercure) - A flexible DICOM routing and processing solution with user-friendly web interface and extensive monitoring functions.
 - [Niffler](https://github.com/Emory-HITI/Niffler) - A lightweight framework to facilitate executing machine learning pipelines and processing workflows on DICOM images and metadata.
 
