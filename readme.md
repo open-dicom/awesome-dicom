@@ -165,6 +165,7 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 #### Sorting
 
 - [dicomsort](https://github.com/pieper/dicomsort) - Given DICOM files in a random folder structure, this program copies all into a user-defined folder hierarchy, creating folders as necessary and changing DICOM file names to be more meaningful.
+- [MIA Toolkit](https://miatools.tech) - Free, open-source (MIT) desktop app that consolidates DICOM studies from multiple CDs/USBs into a single portable DICOMDIR archive, with de-duplication and copy verification. Runs entirely on-device, cross-platform (macOS, Windows, Linux).
 
 #### Visualization
 
