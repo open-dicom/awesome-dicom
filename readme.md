@@ -197,6 +197,7 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 #### Visualization
 
 - [AlizaMS](https://github.com/AlizaMedicalImaging/AlizaMS) - DICOM viewer.
+- [Dicom Viewer](https://github.com/EdCafferata/DICOM-player) - Native iOS (SwiftUI) DICOM viewer for iPhone and iPad, with a custom DICOM parser and no external dependencies. On-device only: no account, no cloud upload, no PACS connection. Includes a cine player, Window/Level presets, series navigator and frame export. [App Store](https://apps.apple.com/us/app/dicom-viewer-by-the-it-crowd/id1483496527).
 
 #### Image Computing Platforms
 
