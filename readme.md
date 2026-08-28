@@ -34,6 +34,7 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 - [The DICOM Standard](https://www.dicomstandard.org/current)
 - [DICOM Library](https://www.dicomlibrary.com/) - A free online medical DICOM image or video file sharing service for educational and scientific purposes.
 - [DICOM Standard Browser](https://dicom.innolitics.com/ciods) - Part 3 of the DICOM standard as a tree.
+- [DICOM Transfer Syntax Registry and Viewer Decode Matrix](https://minipacs.net/dicom-transfer-syntax/) - All 63 PS3.6 transfer syntax UIDs with a tested matrix of which free viewers decode which syntaxes, with screenshots and CSV downloads (CC BY 4.0).
 - [DICOM is Easy](https://dicomiseasy.blogspot.com/2011/10/introduction-to-dicom-chapter-1.html) - A personal blog which includes a series of DICOM tutorials.
 - [Microsoft training module](https://learn.microsoft.com/en-us/training/modules/medical-imaging-data/) - Short training module about working with medical imaging data in general and DICOM in particular.
 - [Saravanan Subramanian's blog](https://saravanansubramanian.com/dicomtutorials/) - A series of articles and tutorials focusing on working with DICOM using Java and .NET.
@@ -120,6 +121,7 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 - [dicomViewerLib](https://github.com/fourctv/dicomViewerLib) - An Angular 9+ DICOMWeb viewer component, based on the cornerstone.js project.
 - [DWV](https://github.com/ivmartel/dwv) - DICOM Web Viewer (DWV) is an open source zero footprint medical image viewer library. It uses only JavaScript and HTML5 technologies, meaning that it can be run on any platform that provides a modern browser (laptop, tablet, phone and even modern TVs).
 - [dwv-react](https://github.com/ivmartel/dwv-react) - Medical viewer using DWV and [React](https://react.dev/).
+- [MiniPACS Free DICOM Viewer](https://minipacs.net/free-dicom-viewer/) - Free in-browser DICOM viewer with no account or upload; decodes JPEG, JPEG-LS, JPEG 2000, RLE and Deflated transfer syntaxes client-side.
 - [NiiVue](https://github.com/niivue/niivue) - A WebGL module that can be embedded into HTML, Vue.js, Angular, React, Electron and Capacitor frameworks. It provides scripting and drag and drop abilities to visualize and render voxel-based images (e.g., DICOM and NIfTI), meshes, and tractography streamlines and connectomes, as well as drawing functions ([demos](https://niivue.github.io/niivue/)).
 - [U Dicom Viewer](https://github.com/webnamics/u-dicom-viewer) - A simple but functional DICOM viewer for any device with a web browser. Allows opening and viewing 2D medical images in a wide variety of DICOM formats.
 - [Viewers](https://github.com/OHIF/Viewers) - A zero-footprint medical image viewer provided by the [Open Health Imaging Foundation (OHIF)](https://ohif.org/). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support DICOMWeb.
