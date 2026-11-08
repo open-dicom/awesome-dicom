@@ -35,6 +35,7 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 Free tools that run in the browser, with no installation or account. Their source code is not necessarily public.
 
 - [MiniPACS Free DICOM Viewer](https://minipacs.net/free-dicom-viewer/) - Viewer that decodes JPEG, JPEG-LS, JPEG 2000, RLE and Deflated transfer syntaxes. Files are parsed locally and never uploaded.
+- [RadRobin](https://radrobin.com) - Client-side viewer with multiplanar and 3D rendering. Opens local files without uploading them, streams from DICOMweb servers, and reads and writes DICOM SR and SEG.
 
 ## Learning Resources
 
@@ -136,8 +137,6 @@ Free tools that run in the browser, with no installation or account. Their sourc
 - [U Dicom Viewer](https://github.com/webnamics/u-dicom-viewer) - A simple but functional DICOM viewer for any device with a web browser. Allows opening and viewing 2D medical images in a wide variety of DICOM formats.
 - [Viewers](https://github.com/OHIF/Viewers) - A zero-footprint medical image viewer provided by the [Open Health Imaging Foundation (OHIF)](https://ohif.org/). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support DICOMWeb.
 - [VolView](https://github.com/Kitware/VolView) - Web based radiological viewer for clinical professionals. Built with [Vue.js](https://vuejs.org/) and [VTK.js](https://github.com/Kitware/vtk-js).
-- [RadRobin](https://radrobin.com) - A serverless, multi-modality web platform operating 100% client-side. Supports 3D volume rendering, advanced vessel tracking, virtual colonoscopy, and native DICOM SR/SEG round-tripping. Open for commercial OEM/white-label licensing.
-
 
 #### Other
 
