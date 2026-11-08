@@ -11,6 +11,7 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 ## Contents
 
 - [Datasets](#datasets)
+- [Hosted Tools](#hosted-tools)
 - [Learning Resources](#learning-resources)
 - [Libraries](#libraries)
   - [C#](#c)
@@ -29,12 +30,21 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 - [Imaging Data Commons (IDC)](https://datacommons.cancer.gov/repository/imaging-data-commons) - A cloud-based repository of publicly available cancer imaging data. Includes radiology, digital pathology, analysis results all in DICOM format. Mirrors all public radiology DICOM collections available in TCIA.
 - [Medical Imaging and Data Resource Center (MIDRC)](https://www.midrc.org/) - This archive contains DICOM imaging for over 67,000 COVID-19 subjects.
 
+## Hosted Tools
+
+Free tools that run in the browser, with no installation or account. Their source code is not necessarily public.
+
+- [MiniPACS Free DICOM Viewer](https://minipacs.net/free-dicom-viewer/) - Viewer that decodes JPEG, JPEG-LS, JPEG 2000, RLE and Deflated transfer syntaxes. Files are parsed locally and never uploaded.
+- [RadRobin](https://radrobin.com) - Client-side viewer with multiplanar and 3D rendering. Opens local files without uploading them, streams from DICOMweb servers, and reads and writes DICOM SR and SEG.
+- [tresD DICOM](https://tresddicom.com) - CBCT viewer with volume rendering presets, panoramic and cephalometric reconstructions, airway views, T0/T1 superimposition and alignment of STL/PLY intraoral scans. Files never leave the computer.
+
 ## Learning Resources
 
 - [The DICOM Standard](https://www.dicomstandard.org/current)
 - [DICOM Library](https://www.dicomlibrary.com/) - A free online medical DICOM image or video file sharing service for educational and scientific purposes.
 - [DICOM Standard Browser](https://dicom.innolitics.com/ciods) - Part 3 of the DICOM standard as a tree.
 - [Saga DICOM Standard Browser](https://saga-it.com/dicom/spec) - Cross-linked index of PS3 covering attributes, CIODs, modules, SOP classes, transfer syntaxes and VRs, alongside HL7 v2 and FHIR mapping references.
+- [DICOM Transfer Syntax Registry and Viewer Decode Matrix](https://minipacs.net/dicom-transfer-syntax/) - Every PS3.6 transfer syntax UID, with a tested matrix of which free viewers decode which syntaxes, screenshots and CSV downloads (CC BY 4.0).
 - [DICOM is Easy](https://dicomiseasy.blogspot.com/2011/10/introduction-to-dicom-chapter-1.html) - A personal blog which includes a series of DICOM tutorials.
 - [Microsoft training module](https://learn.microsoft.com/en-us/training/modules/medical-imaging-data/) - Short training module about working with medical imaging data in general and DICOM in particular.
 - [Saravanan Subramanian's blog](https://saravanansubramanian.com/dicomtutorials/) - A series of articles and tutorials focusing on working with DICOM using Java and .NET.
@@ -168,6 +178,7 @@ The [DICOM Standard](https://www.dicomstandard.org/) is _the_ international stan
 #### Sorting
 
 - [dicomsort](https://github.com/pieper/dicomsort) - Given DICOM files in a random folder structure, this program copies all into a user-defined folder hierarchy, creating folders as necessary and changing DICOM file names to be more meaningful.
+- [MIA Toolkit](https://github.com/Fritanga-Collective/mia-toolkit) - Desktop app that consolidates DICOM studies from multiple CDs and USB drives into a single de-duplicated, verified DICOMDIR archive.
 
 #### Visualization
 
