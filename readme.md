@@ -40,7 +40,7 @@ Free tools that run in the browser, with no installation or account. Their sourc
 
 ## Learning Resources
 
-- [The DICOM Standard](https://www.dicomstandard.org/current) - Current edition of every part of the standard, in PDF, HTML, Word and XML.
+- [The DICOM Standard](https://www.dicomstandard.org/current) - Current edition of every part of the standard, in PDF, HTML, Word, ODT and XML.
 - [DICOM Library](https://www.dicomlibrary.com/) - Free online service for sharing DICOM images and videos for education and research.
 - [DICOM Standard Browser](https://dicom.innolitics.com/ciods) - Browsable tree of the information object definitions, modules and attributes in Part 3 of the standard.
 - [Saga DICOM Standard Browser](https://saga-it.com/dicom/spec) - Cross-linked index of PS3 covering attributes, CIODs, modules, SOP classes, transfer syntaxes and VRs, alongside HL7 v2 and FHIR mapping references.
@@ -67,8 +67,8 @@ Free tools that run in the browser, with no installation or account. Their sourc
 
 - [CTK](https://github.com/commontk/CTK) - Common Toolkit of support code for medical image analysis and surgical navigation, including Qt widgets for browsing, querying and retrieving DICOM data.
 - [dcmqi](https://github.com/QIICR/dcmqi) - Libraries and command-line tools for converting quantitative image analysis results, such as segmentations and parametric maps, to and from DICOM.
-- [DCMTK](https://github.com/DCMTK/dcmtk) - Libraries and command-line tools implementing large parts of the DICOM standard, including file handling, networking and image processing.
-- [GDCM](https://github.com/malaterre/GDCM) - Grassroots DICOM, a library for reading, writing and transcoding DICOM files, with bindings for Python, C# and Java.
+- [DCMTK](https://github.com/DCMTK/dcmtk) - Libraries and command-line tools for DICOM file handling, networking and image processing.
+- [GDCM](https://github.com/malaterre/GDCM) - Grassroots DICOM, a library for reading, writing and transcoding DICOM files and for DICOM networking, with bindings for Python, C#, Java and PHP.
 - [MITK](https://github.com/MITK/MITK) - Medical Imaging Interaction Toolkit, a framework built on ITK and VTK for developing interactive medical image processing software.
 - [Orthanc](https://github.com/jodogne/OrthancMirror) - Lightweight standalone DICOM server with a REST API and a plugin system.
 - [SimpleITK](https://github.com/SimpleITK/SimpleITK) - Simplified interface to the [Insight Toolkit (ITK)](https://itk.org/) for filtering, segmentation and registration, including reading and writing DICOM series.
@@ -121,11 +121,11 @@ Free tools that run in the browser, with no installation or account. Their sourc
 - [dcmjs-imaging](https://github.com/PantelisGeorgiadis/dcmjs-imaging) - DICOM image and overlay rendering pipeline for Node.js and browsers using dcmjs.
 - [dicom-microscopy-viewer](https://github.com/ImagingDataCommons/dicom-microscopy-viewer) - JavaScript library for web-based visualization of DICOM VL Whole Slide Microscopy Image datasets and derived information.
 - [dicom-nifti-viewer-vscode](https://github.com/theluckystrike/dicom-nifti-viewer-vscode) - VS Code extension that opens DICOM, DICOMDIR and NIfTI files with CT window presets, axial, coronal and sagittal views and a searchable tag table.
-- [dicom.ts](https://github.com/wearemothership/dicom.ts) - Small DICOM parser and WebGL renderer for fast display of greyscale single-frame images in the browser.
+- [dicom.ts](https://github.com/wearemothership/dicom.ts) - Small DICOM parser and WebGL renderer for fast image display in the browser.
 - [dicomviewer](https://github.com/ayselafsar/dicomviewer) - Nextcloud app for viewing DICOM files, built on the OHIF Viewer.
 - [DWV](https://github.com/ivmartel/dwv) - Zero-footprint medical image viewer library in JavaScript and HTML5 that runs in any modern browser, on desktop or mobile.
 - [dwv-react](https://github.com/ivmartel/dwv-react) - Medical viewer using DWV and [React](https://react.dev/).
-- [NiiVue](https://github.com/niivue/niivue) - WebGL viewer for voxel images (including DICOM and NIfTI), meshes and tractography that embeds in any web framework ([demos](https://niivue.com/)).
+- [NiiVue](https://github.com/niivue/niivue) - WebGL viewer for voxel images (including DICOM and NIfTI), meshes and tractography that embeds in any web framework ([demos](https://niivue.com/demos/)).
 - [OHIF Viewer](https://github.com/OHIF/Viewers) - Zero-footprint, extensible web viewer from the [Open Health Imaging Foundation](https://ohif.org/) that works with DICOMweb archives.
 - [VolView](https://github.com/Kitware/VolView) - Web-based radiological viewer built with [Vue.js](https://vuejs.org/) and [VTK.js](https://github.com/Kitware/vtk-js).
 
@@ -162,7 +162,6 @@ Free tools that run in the browser, with no installation or account. Their sourc
 
 - [dcm-anon](https://github.com/Ces107/dcm-anon) - PS3.15 Basic Profile anonymizer that emits a hash-chained GDPR/HIPAA compliance manifest and an independent post-run residual-PHI scan.
 - [deid](https://github.com/pydicom/deid) - Best-effort de-identification of medical images, driven by recipe files.
-- [DICAT](https://github.com/aces/DICAT) - Graphical tool for de-identifying DICOM files on a local workstation.
 - [dicom-anonymizer](https://github.com/KitwareMedical/dicom-anonymizer) - Command-line tool that anonymizes DICOM files following the DICOM standard.
 
 #### Sorting
