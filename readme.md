@@ -55,9 +55,6 @@ Free tools that run in the browser, with no installation or account. Their sourc
 
 #### General
 
-- [dicom-server](https://github.com/microsoft/dicom-server) - The Medical Imaging Server for DICOM is an open source DICOM server that is easily deployed on Azure.
-- [DICOMcloud](https://github.com/DICOMcloud/DICOMcloud) - A standalone DICOMWeb server with RESTful implementation of the DICOMWeb/WADO services. The DICOMcloud server can interface with any DICOMWeb client over the current implemented features (qido-rs, wado-uri, wado-rs and stow-rs).
-- [Evil-DICOM](https://github.com/rexcardan/Evil-DICOM) - A simple to use library for reading and manipulating DICOM files.
 - [fo-dicom](https://github.com/fo-dicom/fo-dicom) - Fellow Oak DICOM, a DICOM toolkit in C# for all .NET Standard 2.0 compatible frameworks.
 
 #### Visualization
@@ -81,7 +78,6 @@ Free tools that run in the browser, with no installation or account. Their sourc
 
 - [dcm2niix](https://github.com/rordenlab/dcm2niix) - Convert neuroimaging data from the DICOM format to the [NIfTI](https://nifti.nimh.nih.gov/) format.
 - [DicomToMesh](https://github.com/AOT-AG/DicomToMesh) - A command line tool to transform a DICOM volume into a 3d surface mesh (_obj_, _stl_ or _ply_). Several mesh processing routines can be enabled, such as mesh reduction, smoothing or cleaning.
-- [wsi-to-dicom-converter](https://github.com/GoogleCloudPlatform/wsi-to-dicom-converter) - Convert whole slide images (WSIs) to DICOM.
 
 #### Other
 
@@ -108,33 +104,28 @@ Free tools that run in the browser, with no installation or account. Their sourc
 
 #### General
 
-- [cornerstoneWADOImageLoader](https://tinyurl.com/bcdb4bxa) - A [cornerstone.js](https://github.com/cornerstonejs/) Image Loader for DICOM P10 instances over HTTP (WADO-URI) or DICOMWeb (WADO-RS). This can be used to integrate cornerstone with WADO-URI servers, DICOMWeb servers or any other HTTP based server that returns DICOM P10 instances (e.g., Orthanc or custom servers).
 - [@cosyte/dicom](https://github.com/cosyte/dicom) - DICOM Part 10 parser and serializer for Node.js and TypeScript. Reads metadata from vendor-quirky files, never decodes pixel data, and has no runtime dependencies.
-- [Daikon](https://github.com/rii-mango/Daikon) - A pure JavaScript DICOM reader.
 - [dcmjs](https://github.com/dcmjs-org/dcmjs) - JavaScript implementation of DICOM manipulation. This code is an outgrowth of several efforts to implement web applications for medical imaging.
 - [dcmjs-codecs](https://github.com/PantelisGeorgiadis/dcmjs-codecs) - DICOM file and dataset transcoding for Node.js and browser using the dcmjs library.
 - [dcmjs-dimse](https://github.com/PantelisGeorgiadis/dcmjs-dimse) - DICOM DIMSE implementation for Node.js using the dcmjs library.
 - [dicomParser](https://tinyurl.com/mr39unuk) - Cornerstone.js' lightweight library for parsing DICOM P10 byte streams, as well as raw (not encapsulated in part 10) byte streams, in modern HTML5 based web browsers (IE10+), Node.js and Meteor.
 - [dicomweb-client](https://github.com/dcmjs-org/dicomweb-client) - JavaScript client implementation of DICOMWeb.
 - [dicomweb-pacs](https://github.com/knopkem/dicomweb-pacs) - Easy to use DICOMWeb enabled PACS with DIMSE services based on sqlite database.
-- [dicomweb-server](https://github.com/dcmjs-org/dicomweb-server) - Lightweight DICOMWeb Server with CouchDB.
 - [Efferent.Dicom](https://github.com/Efferent-Health/Dicom) - Ligthweight JS/TS/Node library for reading and writing DICOM files 
 
 #### Visualization
 
 - [bluelight](https://github.com/cylab-tw/bluelight) - Browser-based medical image viewer primarily maintained by the [Imaging Informatics Labs](https://cylab.dicom.tw/). It is a pure single-page application (SPA), lightweight, and using only JavaScript and HTML5 technologies to easily deploy it on any HTTP server.
-- [cornerstone](https://tinyurl.com/2p85awt3) - A complete web based medical imaging platform. This repository contains the cornerstone.js "Core" component which is a lightweight JavaScript library for displaying medical images in modern web browsers that support the HTML5 canvas element.
+- [Cornerstone3D](https://github.com/cornerstonejs/cornerstone3D) - Libraries for building web-based medical imaging applications, with GPU-accelerated stack, MPR and volume rendering, annotation and segmentation tools, and a DICOM image loader.
 - [dcmjs-imaging](https://github.com/PantelisGeorgiadis/dcmjs-imaging) - DICOM image and overlay rendering pipeline for Node.js and browser using the dcmjs library.
 - [dcmjs-ecg](https://github.com/PantelisGeorgiadis/dcmjs-ecg) - DICOM electrocardiography (ECG) rendering for Node.js and browser using dcmjs.
 - [dicom.ts](https://github.com/wearemothership/dicom.ts) - A small, superfast JS DICOM renderer.
 - [dicom-microscopy-viewer](https://github.com/ImagingDataCommons/dicom-microscopy-viewer) - Vanilla JS library for web-based visualization of DICOM VL Whole Slide Microscopy Image datasets and derived information.
 - [dicom-nifti-viewer-vscode](https://github.com/theluckystrike/dicom-nifti-viewer-vscode) - VS Code extension that opens DICOM, DICOMDIR and NIfTI files with CT window presets, axial, coronal and sagittal views and a searchable tag table.
 - [dicomviewer](https://github.com/ayselafsar/dicomviewer) - A DICOM viewer which uses the cornerstone.js library to display DICOM files in Nextcloud.
-- [dicomViewerLib](https://github.com/fourctv/dicomViewerLib) - An Angular 9+ DICOMWeb viewer component, based on the cornerstone.js project.
 - [DWV](https://github.com/ivmartel/dwv) - DICOM Web Viewer (DWV) is an open source zero footprint medical image viewer library. It uses only JavaScript and HTML5 technologies, meaning that it can be run on any platform that provides a modern browser (laptop, tablet, phone and even modern TVs).
 - [dwv-react](https://github.com/ivmartel/dwv-react) - Medical viewer using DWV and [React](https://react.dev/).
 - [NiiVue](https://github.com/niivue/niivue) - A WebGL module that can be embedded into HTML, Vue.js, Angular, React, Electron and Capacitor frameworks. It provides scripting and drag and drop abilities to visualize and render voxel-based images (e.g., DICOM and NIfTI), meshes, and tractography streamlines and connectomes, as well as drawing functions ([demos](https://niivue.github.io/niivue/)).
-- [U Dicom Viewer](https://github.com/webnamics/u-dicom-viewer) - A simple but functional DICOM viewer for any device with a web browser. Allows opening and viewing 2D medical images in a wide variety of DICOM formats.
 - [Viewers](https://github.com/OHIF/Viewers) - A zero-footprint medical image viewer provided by the [Open Health Imaging Foundation (OHIF)](https://ohif.org/). It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support DICOMWeb.
 - [VolView](https://github.com/Kitware/VolView) - Web based radiological viewer for clinical professionals. Built with [Vue.js](https://vuejs.org/) and [VTK.js](https://github.com/Kitware/vtk-js).
 
@@ -152,10 +143,8 @@ Free tools that run in the browser, with no installation or account. Their sourc
 
 #### General
 
-- [dicompyler](https://github.com/dicompyler/) - An extensible open source radiation therapy research platform based on the DICOM standard. It also functions as a cross-platform DICOM RT viewer.
 - [dicomweb-client](https://github.com/ImagingDataCommons/dicomweb-client) - Provides client interfaces for DICOMWeb RESTful services QIDO-RS, WADO-RS and STOW-RS to search, retrieve and store DICOM objects over the web, respectively.
 - [highdicom](https://github.com/ImagingDataCommons/highdicom) - Provides high-level DICOM abstractions for the Python programming language to facilitate the creation and handling of DICOM objects for image-derived information, including image annotations, and image analysis results.
-- [MedPy](https://github.com/loli/medpy) - An image processing library and collection of scripts targeted towards medical (i.e. high dimensional) image processing.
 - [pydicom](https://github.com/pydicom/pydicom) - A pure Python package for working with DICOM files. It lets you read, modify and write DICOM data in an easy "pythonic" way.
 - [pynetdicom](https://github.com/pydicom/pynetdicom) - A pure Python 3.7+ package that implements the DICOM networking protocol. Working with _pydicom_, it allows the easy creation of DICOM Service Class Users (SCUs) and Service Class Providers (SCPs).
 
@@ -167,6 +156,7 @@ Free tools that run in the browser, with no installation or account. Their sourc
 - [dicom2stl](https://github.com/dave3d/dicom2stl) - Convert a DICOM series to an [STL](<https://en.wikipedia.org/wiki/STL_(file_format)>) surface mesh.
 - [Dicomifier](https://github.com/lamyj/dicomifier) - A set of tools to convert Bruker data to DICOM files, and DICOM files to NIfTI.
 - [heudiconv](https://github.com/nipy/heudiconv) - A flexible DICOM converter for organizing brain imaging data into structured directory layouts.
+- [wsidicomizer](https://github.com/imi-bigpicture/wsidicomizer) - Convert proprietary whole slide image formats to DICOM, reusing the original compressed tiles where possible.
 
 #### Anonymization
 
@@ -189,8 +179,6 @@ Free tools that run in the browser, with no installation or account. Their sourc
 
 #### Other
 
-- [dcmrtstruct2nii](https://github.com/Sikerdebaard/dcmrtstruct2nii) - DICOM RT-Struct to nii-mask. This is a naïve approach to rasterizing rt-struct to masks in the NIfTI format.
-- [dicom-numpy](https://github.com/innolitics/dicom-numpy) - A set of utilities for extracting data contained in DICOM files into Numpy ndarrays.
 - [dicom-standard](https://github.com/innolitics/dicom-standard) - Parses the web version of the DICOM Standard into human and machine-friendly JSON files.
 
 ### Rust
@@ -202,7 +190,6 @@ Free tools that run in the browser, with no installation or account. Their sourc
 #### Machine Learning
 
 - [mercure](https://github.com/mercure-imaging/mercure) - A flexible DICOM routing and processing solution with user-friendly web interface and extensive monitoring functions.
-- [Niffler](https://github.com/Emory-HITI/Niffler) - A lightweight framework to facilitate executing machine learning pipelines and processing workflows on DICOM images and metadata.
 
 #### Validation
 
