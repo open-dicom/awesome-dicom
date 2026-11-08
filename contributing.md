@@ -10,6 +10,11 @@ Ensure your pull request adheres to the following guidelines:
 
 - Include only resources and libraries that are actively maintained and are, in fact, awesome. 
 - Please make sure you use correct grammar and conform with the general styling of this list.
+- Entries under Libraries must be open source and link to their source repository.
+- Free tools without public source belong under Hosted Tools, provided they run in the browser and need no installation or account.
+- Keep descriptions factual: say what the resource does, and leave out pricing, licensing offers and marketing claims.
+- Within Libraries and Hosted Tools, keep entries in alphabetical order.
+- If you are affiliated with what you are adding, say so in the pull request description.
 
 Thank you for your suggestions!
 
