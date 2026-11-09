@@ -64,8 +64,9 @@ def find_unsorted_groups(lines: list[str]) -> list[tuple[int, str]]:
     Returns
     -------
     list[tuple[int, str]]
-        The 1-based line number of the first entry out of place in each unsorted group, and a
-        message naming the expected order.
+        The 1-based line number of the first entry that isn't in its sorted position in each
+        unsorted group, and a message naming the expected order. When an entry is added at the
+        end of a group but belongs earlier, that is an earlier entry, not the added one.
     """
     problems: list[tuple[int, str]] = []
     top_level_section = ""

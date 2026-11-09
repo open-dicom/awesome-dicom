@@ -22,7 +22,7 @@ jobs:
   check-links:
     # lychee-action downloads and runs the lychee binary unverified, so this job's token can only
     # read. lychee's output still decides the status and report that update-issue posts, so a
-    # compromised binary could at worst close or rewrite the link-check tracking issue.
+    # compromised binary could at worst open, close or rewrite the link-check tracking issue.
     runs-on: ubuntu-latest
     outputs:
       status: ${{ steps.result.outputs.status }}

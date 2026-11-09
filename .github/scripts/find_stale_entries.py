@@ -195,6 +195,11 @@ def find_last_commit_date(slug: str, token: str) -> datetime | None:
     -------
     datetime | None
         The committer date, or None if the repository has no commits.
+
+    Raises
+    ------
+    GitHubApiError
+        If GitHub can't answer, or answers the commits request with an unexpected status.
     """
     status, latest_commits = fetch_github_json(f"/repos/{slug}/commits?per_page=1", token)
     if status == EMPTY_REPOSITORY_STATUS_CODE or latest_commits == []:
@@ -219,6 +224,11 @@ def describe_repository_problem(slug: str, token: str) -> str | None:
     -------
     str | None
         "repository not found", "repository is archived", a note that it moved, or None.
+
+    Raises
+    ------
+    GitHubApiError
+        If GitHub can't answer, or answers the repository request with an unexpected status.
     """
     status, repository = fetch_github_json(f"/repos/{slug}", token)
     if status in NOT_FOUND_STATUS_CODES:
