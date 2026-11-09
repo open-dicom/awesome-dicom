@@ -193,6 +193,14 @@ Applications and command-line tools to run, grouped by task.
 - [OHIF Viewer](https://github.com/OHIF/Viewers) - Zero-footprint, extensible web viewer from the [Open Health Imaging Foundation](https://ohif.org/) that works with DICOMweb archives ([demo](https://viewer.ohif.org/)).
 - [VolView](https://github.com/Kitware/VolView) - Web-based radiological viewer built with [Vue.js](https://vuejs.org/) and [VTK.js](https://github.com/Kitware/vtk-js) ([demo](https://volview.kitware.app/)).
 
+## Related Lists
+
+- [Awesome Health](https://github.com/kakoni/awesome-healthcare) - Open source healthcare software, libraries, tools and resources.
+- [Awesome HL7 and DICOM](https://github.com/MichaelLeeHobbs/awesome-hl7-dicom) - HL7 and DICOM resources, tools and field notes for healthcare integration.
+- [Awesome Medical Dataset](https://github.com/openmedlab/Awesome-Medical-Dataset) - Medical imaging and health record datasets, with tools and tutorials for working with them.
+- [Awesome Medical Imaging](https://github.com/fepegar/awesome-medical-imaging) - Software for medical imaging research.
+- [Awesome Neuroimaging](https://github.com/NPACore/awesome-neuroimaging) - Tools for exploring, organizing and analyzing brain images and recordings, with a focus on MRI.
+
 ## Contributing
 
 Contributions welcome! Read the [contribution guidelines](contributing.md) first. Projects that are no longer maintained are listed in the [archive](archive.md).
