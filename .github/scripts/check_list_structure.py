@@ -64,21 +64,25 @@ def find_unsorted_groups(lines: list[str]) -> list[tuple[int, str]]:
     Returns
     -------
     list[tuple[int, str]]
-        The 1-based line number of each unsorted group's heading, and a message naming the
-        expected order.
+        The 1-based line number of the first entry out of place in each unsorted group, and a
+        message naming the expected order.
     """
     problems: list[tuple[int, str]] = []
     top_level_section = ""
     group_heading = ""
-    group_heading_line_number = 0
     entry_names: list[str] = []
+    entry_line_numbers: list[int] = []
 
     def check_group() -> None:
         """Record a problem if the group just finished is in a sorted section and out of order."""
         expected_order = sorted(entry_names, key=str.lower)
-        if top_level_section in SORTED_SECTIONS and entry_names != expected_order:
-            message = f"'{group_heading}' should be ordered: {', '.join(expected_order)}"
-            problems.append((group_heading_line_number, message))
+        if top_level_section not in SORTED_SECTIONS or entry_names == expected_order:
+            return
+        first_misplaced_index = next(
+            index for index, (actual, expected) in enumerate(zip(entry_names, expected_order)) if actual != expected
+        )
+        message = f"'{group_heading}' should be ordered: {', '.join(expected_order)}"
+        problems.append((entry_line_numbers[first_misplaced_index], message))
 
     for line_number, line in enumerate(lines, start=1):
         heading = HEADING_PATTERN.match(line)
@@ -88,12 +92,13 @@ def find_unsorted_groups(lines: list[str]) -> list[tuple[int, str]]:
             if heading_marks == TOP_LEVEL_HEADING_MARKS:
                 top_level_section = heading_text
             group_heading = heading_text
-            group_heading_line_number = line_number
             entry_names = []
+            entry_line_numbers = []
             continue
         entry = ENTRY_PATTERN.match(line)
         if entry:
             entry_names.append(entry.group(1))
+            entry_line_numbers.append(line_number)
     check_group()
     return problems
 

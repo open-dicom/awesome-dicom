@@ -53,12 +53,20 @@ INACTIVE_AFTER_DAYS = 730  # About two years, as in contributing.md's archive po
 SECTIONS_CHECKED_FOR_INACTIVITY = frozenset({"Libraries", "Tools"})
 
 TOP_LEVEL_HEADING_PATTERN = re.compile(r"^## (.+?)\s*$")
-ENTRY_PATTERN = re.compile(r"^- \[(?P<name>[^\]]+)\]\(<?(?P<url>[^)\s>]+)>?(?:\s+\"[^\"]*\")?\)")
+# An entry: "- [Name](url)", with an optional <...> around the URL and an optional quoted title.
+ENTRY_PATTERN = re.compile(
+    r"^- \[(?P<name>[^\]]+)\]\(<?(?P<url>[^)\s>]+)>?(?:\s+(?:\"[^\"]*\"|'[^']*'))?\)"
+)
 GITHUB_REPOSITORY_PATTERN = re.compile(
     r"^https?://(?:www\.)?github\.com/(?P<owner>[^/]+)/(?P<repository>[^/#?]+)", re.IGNORECASE
 )
 # github.com paths that look like owner/repository but aren't repositories.
-RESERVED_GITHUB_OWNERS = frozenset({"orgs", "topics", "sponsors", "marketplace", "apps", "collections", "features"})
+RESERVED_GITHUB_OWNERS = frozenset(
+    {
+        "apps", "collections", "explore", "features", "marketplace", "orgs",
+        "search", "sponsors", "topics", "trending", "users",
+    }
+)
 
 
 @dataclass(frozen=True)
@@ -143,8 +151,8 @@ def fetch_github_json(api_path: str, token: str) -> tuple[int, Any]:
     Returns
     -------
     tuple[int, Any]
-        The HTTP status and the decoded JSON. The JSON is None for 404, 409 and 451, which
-        the caller interprets.
+        The HTTP status and the decoded JSON. For 404, 409 and 451 the JSON is None, and the
+        caller decides what the status means.
 
     Raises
     ------
@@ -166,7 +174,7 @@ def fetch_github_json(api_path: str, token: str) -> tuple[int, Any]:
             if error.code not in RETRYABLE_STATUS_CODES:
                 raise GitHubApiError(f"{api_path}: HTTP {error.code}") from error
             last_error = f"HTTP {error.code}"
-        except (urllib.error.URLError, http.client.HTTPException, OSError) as error:
+        except (http.client.HTTPException, OSError) as error:  # OSError covers URLError and timeouts.
             last_error = str(error)
         if attempt < REQUEST_ATTEMPTS:
             time.sleep(RETRY_DELAY_SECONDS)
@@ -188,9 +196,11 @@ def find_last_commit_date(slug: str, token: str) -> datetime | None:
     datetime | None
         The committer date, or None if the repository has no commits.
     """
-    _, latest_commits = fetch_github_json(f"/repos/{slug}/commits?per_page=1", token)
-    if not latest_commits:
+    status, latest_commits = fetch_github_json(f"/repos/{slug}/commits?per_page=1", token)
+    if status == EMPTY_REPOSITORY_STATUS_CODE or latest_commits == []:
         return None
+    if latest_commits is None:
+        raise GitHubApiError(f"/repos/{slug}/commits: HTTP {status}")
     last_commit_date_text = latest_commits[0]["commit"]["committer"]["date"]
     return datetime.fromisoformat(last_commit_date_text.replace("Z", "+00:00"))
 
@@ -210,9 +220,11 @@ def describe_repository_problem(slug: str, token: str) -> str | None:
     str | None
         "repository not found", "repository is archived", a note that it moved, or None.
     """
-    _, repository = fetch_github_json(f"/repos/{slug}", token)
-    if repository is None:
+    status, repository = fetch_github_json(f"/repos/{slug}", token)
+    if status in NOT_FOUND_STATUS_CODES:
         return "repository not found"
+    if repository is None:
+        raise GitHubApiError(f"/repos/{slug}: HTTP {status}")
     if repository["archived"]:
         return "repository is archived"
     if repository["full_name"].lower() != slug.lower():
@@ -336,15 +348,29 @@ def main(readme_path: Path, report_path: Path) -> int:
         EXIT_ALL_CLEAR, EXIT_FOUND_PROBLEMS or EXIT_CHECK_FAILED.
     """
     token = os.environ.get("GITHUB_TOKEN", "")
+    # Anything not caught here, such as an unexpected API response, crashes with a traceback
+    # and exit code 1, which the workflow also treats as a failed check.
     try:
         linked_repositories = find_linked_repositories(readme_path)
         inactivity_exceptions = load_inactivity_exceptions(EXCEPTIONS_PATH)
+    except OSError as error:
+        print(f"::error::Can't read the list or the exceptions file: {error}")
+        return EXIT_CHECK_FAILED
+    if not linked_repositories:
+        print(f"::error::Found no entries linking GitHub repositories in {readme_path}.")
+        return EXIT_CHECK_FAILED
+
+    try:
         problems = find_problems(linked_repositories, inactivity_exceptions, token)
-        repository_count = len({linked_repository.slug.lower() for linked_repository in linked_repositories})
-        report = build_report(problems, len(linked_repositories), repository_count)
-        report_path.write_text(report, encoding="utf-8")
-    except (GitHubApiError, OSError, ValueError, KeyError) as error:
+    except GitHubApiError as error:
         print(f"::error::The staleness check couldn't finish: {error}")
+        return EXIT_CHECK_FAILED
+    repository_count = len({linked_repository.slug.lower() for linked_repository in linked_repositories})
+    report = build_report(problems, len(linked_repositories), repository_count)
+    try:
+        report_path.write_text(report, encoding="utf-8")
+    except OSError as error:
+        print(f"::error::Can't write the report to {report_path}: {error}")
         return EXIT_CHECK_FAILED
     print(report)
     return EXIT_FOUND_PROBLEMS if problems else EXIT_ALL_CLEAR
