@@ -53,7 +53,7 @@ Projects that are archived, deprecated, or have had no commits on their default 
 
 ## Automated checks
 
-Each pull request that changes the list runs [awesome-lint](https://github.com/sindresorhus/awesome-lint) and checks for duplicated entries and entries out of alphabetical order. A weekly job checks every link, and a monthly job looks for linked repositories that are archived, moved or inactive. Those two jobs report problems in an issue.
+Each pull request that changes the list runs [awesome-lint](https://github.com/sindresorhus/awesome-lint) and checks for duplicated entries and entries out of alphabetical order. A weekly job checks the links, apart from those listed in `.lycheeignore`. A monthly job looks for linked repositories that are archived, moved or inactive. Those two jobs report problems in an issue. GitHub pauses scheduled jobs after 60 days without commits, so a maintainer may need to re-enable them from the repository's Actions tab.
 
 ## Updating your PR
 

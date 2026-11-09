@@ -5,6 +5,7 @@ on:
     paths:
       - readme.md
       - contributing.md
+      - code-of-conduct.md
       - .github/workflows/lint.yml
       - .github/scripts/check_list_structure.py
   push:
@@ -12,6 +13,7 @@ on:
     paths:
       - readme.md
       - contributing.md
+      - code-of-conduct.md
       - .github/workflows/lint.yml
       - .github/scripts/check_list_structure.py
   workflow_dispatch:
@@ -27,6 +29,7 @@ jobs:
         with:
           # awesome-lint's repository-age rule reads the first commit, so it needs the full history.
           fetch-depth: 0
+          persist-credentials: false
 
       - uses: actions/setup-node@v7
         with:

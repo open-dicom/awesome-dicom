@@ -5,7 +5,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for the suggestion! A pull request is even better: see the [contribution guidelines](https://github.com/open-dicom/awesome-dicom/blob/main/contributing.md). New and small projects are welcome.
+        Thanks for the suggestion! A pull request is even better: see the [contribution guidelines](https://github.com/open-dicom/awesome-dicom/blob/main/contributing.md). New and small projects are welcome. A library or tool needs to be open source with a license, explain how to install and use it, and be maintained, or stable and still working.
   - type: input
     id: name
     attributes:
