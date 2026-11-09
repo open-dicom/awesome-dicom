@@ -27,6 +27,7 @@ The [DICOM Standard](https://www.dicomstandard.org/) defines the formats for med
 - [Tools](#tools)
   - [Conversion](#conversion)
   - [De-identification](#de-identification)
+  - [Dose Monitoring](#dose-monitoring)
   - [File Management](#file-management)
   - [Gateways and Routing](#gateways-and-routing)
   - [Radiation Therapy](#radiation-therapy)
@@ -146,7 +147,9 @@ Applications and command-line tools to run, grouped by task.
 
 ### Conversion
 
+- [BIDScoin](https://github.com/Donders-Institute/bidscoin) - Converts DICOM and other neuroimaging source data to BIDS, with a GUI for mapping series to BIDS names.
 - [bidskit](https://github.com/jmtyszka/bidskit) - CLI for converting a directory of DICOM files into a [BIDS](https://bids.neuroimaging.io/)-compliant dataset.
+- [Dcm2Bids](https://github.com/UNFmontreal/Dcm2Bids) - Organizes dcm2niix output into a BIDS dataset, using a configuration file that maps series metadata to BIDS names.
 - [dcm2niix](https://github.com/rordenlab/dcm2niix) - Convert neuroimaging data from DICOM to [NIfTI](https://nifti.nimh.nih.gov/) ([demo](https://niivue.github.io/niivue-dcm2niix/)).
 - [dcmqi](https://github.com/QIICR/dcmqi) - Libraries and command-line tools for converting quantitative image analysis results, such as segmentations and parametric maps, to and from DICOM.
 - [dcmstack](https://github.com/moloney/dcmstack) - DICOM to NIfTI conversion with the added ability to extract and summarize metadata from the source files.
@@ -163,7 +166,14 @@ Applications and command-line tools to run, grouped by task.
 
 - [dcm-anon](https://github.com/Ces107/dcm-anon) - PS3.15 Basic Profile anonymizer that emits a hash-chained GDPR/HIPAA compliance manifest and an independent post-run residual-PHI scan.
 - [deid](https://github.com/pydicom/deid) - Best-effort de-identification of medical images, driven by recipe files.
+- [dicognito](https://github.com/blairconrad/dicognito) - Replaces identifying attributes with realistic fake values, consistently across all the files of a study.
 - [dicom-anonymizer](https://github.com/KitwareMedical/dicom-anonymizer) - Command-line tool that anonymizes DICOM files following the DICOM standard.
+- [Karnak](https://github.com/nroduit/karnak) - DICOM gateway that de-identifies or modifies the tags of studies in transit, configured through profiles in a web interface.
+- [RSNA Anonymizer](https://github.com/RSNA/anonymizer) - Desktop application that imports studies from local folders or a PACS, de-identifies them, and exports them to a DICOM node or AWS S3.
+
+### Dose Monitoring
+
+- [OpenREM](https://bitbucket.org/openrem/openrem) - Web application that collects patient radiation dose data from DICOM Radiation Dose Structured Reports and image headers, for auditing.
 
 ### File Management
 
@@ -173,6 +183,8 @@ Applications and command-line tools to run, grouped by task.
 
 ### Gateways and Routing
 
+- [dicom-mcp](https://github.com/ChristianHinge/dicom-mcp) - Model Context Protocol server that lets AI assistants query, read and move data on PACS and other DICOM nodes.
+- [DICOM-RST](https://github.com/UMEssen/DICOM-RST) - DICOMweb gateway server that serves data from DIMSE nodes or S3 storage.
 - [dicomweb-proxy](https://github.com/knopkem/dicomweb-proxy) - Translates between DICOMweb and traditional DICOM DIMSE services.
 - [healthcare-dicom-dicomweb-adapter](https://github.com/GoogleCloudPlatform/healthcare-dicom-dicomweb-adapter) - Components that translate between traditional DICOM DIMSE protocols, such as C-STORE, and DICOMweb, such as STOW-RS.
 - [mercure](https://github.com/mercure-imaging/mercure) - DICOM routing and processing platform with a web interface and extensive monitoring.
@@ -181,19 +193,29 @@ Applications and command-line tools to run, grouped by task.
 
 - [DICOMautomaton](https://github.com/hdclark/DICOMautomaton) - Multipurpose tool for analyzing medical physics data, with a focus on automation.
 - [OnkoDICOM](https://github.com/didymo/OnkoDICOM) - DICOM RT viewer with tools for radiation oncology research.
+- [Plastimatch](https://gitlab.com/plastimatch/plastimatch) - Command-line toolkit for image registration and processing in radiotherapy, which converts DICOM RT structure sets, doses and plans to and from other formats.
+- [SlicerRT](https://github.com/SlicerRt/SlicerRT) - 3D Slicer extension that imports and exports DICOM RT structure sets, doses, plans and images, with dose comparison and contouring tools.
 
 ### Research Platforms
 
 - [3D Slicer](https://github.com/Slicer/Slicer) - Desktop platform for medical image visualization, segmentation and registration, with a DICOM browser and support for many clinical DICOM object types.
+- [Kaapana](https://github.com/kaapana/kaapana) - Kubernetes-based platform that combines a DICOM archive, a web viewer and a workflow engine for AI processing and federated learning on medical images.
+- [XNAT](https://github.com/NrgXnat/xnat) - Imaging research platform that receives DICOM through a built-in SCP, anonymizes and archives imaging sessions, and runs processing pipelines.
 
 ### Servers and PACS
 
+- [Conquest DICOM Server](https://github.com/marcelvanherk/Conquest-DICOM-Server) - DICOM server and PACS with SQL database backends, Lua scripting for automating workflows, and a web interface.
+- [dcm4chee-arc-light](https://github.com/dcm4che/dcm4chee-arc-light) - DICOM archive and PACS built on dcm4che, with DIMSE, DICOMweb and HL7 services and a web interface.
 - [dicomweb-pacs](https://github.com/knopkem/dicomweb-pacs) - DICOMweb-enabled PACS with DIMSE services, backed by an SQLite database.
 - [Dicoogle](https://github.com/dicoogle/dicoogle) - Extensible PACS archive that indexes DICOM metadata for flexible search and retrieval instead of relying on a traditional centralized database.
 - [Orthanc](https://github.com/jodogne/OrthancMirror) - Lightweight standalone DICOM server with a REST API and a plugin system ([demo](https://orthanc.uclouvain.be/demo/)).
+- [Orthanc Explorer 2](https://github.com/orthanc-server/orthanc-explorer-2) - Web interface for browsing, uploading, modifying and sharing studies stored in Orthanc, with links to OHIF, Stone and other viewers.
+- [Static DICOMweb](https://github.com/RadicalImaging/Static-DICOMWeb) - Command-line tools that convert DICOM files into static DICOMweb files and serve them from disk or the cloud, optimized for the OHIF Viewer.
 
 ### Validation
 
+- [dicom-validator](https://github.com/pydicom/dicom-validator) - Checks DICOM files against the IOD and module requirements of the standard, parsed from its DocBook edition.
+- [dicom3tools](https://www.dclunie.com/dicom3tools.html) - Command-line utilities for dumping, converting and validating DICOM files, including the dciodvfy validator.
 - [DVTk](https://github.com/dvtk-org/DVTk) - Testing, validating and diagnosing DICOM communication in medical environments.
 
 ### Viewers
@@ -203,6 +225,8 @@ Applications and command-line tools to run, grouped by task.
 - [AlizaMS](https://github.com/AlizaMedicalImaging/AlizaMS) - Cross-platform DICOM viewer with 2D and 3D views, MPR and volume rendering.
 - [dicom-nifti-viewer-vscode](https://github.com/theluckystrike/dicom-nifti-viewer-vscode) - VS Code extension that opens DICOM, DICOMDIR and NIfTI files with CT window presets, axial, coronal and sagittal views and a searchable tag table.
 - [FSLeyes](https://github.com/pauldmccarthy/fsleyes) - Cross-platform viewer for NIfTI and DICOM images, from the FSL neuroimaging suite.
+- [Horos](https://github.com/horosproject/horos) - macOS viewer based on OsiriX, with PACS query and retrieve, MPR, volume rendering and plugins.
+- [InVesalius](https://github.com/invesalius/invesalius3) - Reconstructs 3D surfaces from CT and MRI DICOM series, with segmentation, STL export and neuronavigation.
 - [MRIcroGL](https://github.com/rordenlab/MRIcroGL) - Cross-platform volume renderer for DICOM, NIfTI and other voxel formats, with a drag-and-drop interface and Python scripting.
 - [Weasis](https://github.com/nroduit/Weasis) - Multipurpose standalone and web-based DICOM viewer with a modular architecture.
 
@@ -212,6 +236,8 @@ Applications and command-line tools to run, grouped by task.
 - [dicomviewer](https://github.com/ayselafsar/dicomviewer) - Nextcloud app for viewing DICOM files, built on the OHIF Viewer.
 - [dwv-react](https://github.com/ivmartel/dwv-react) - Medical viewer using DWV and [React](https://react.dev/).
 - [OHIF Viewer](https://github.com/OHIF/Viewers) - Zero-footprint, extensible web viewer from the [Open Health Imaging Foundation](https://ohif.org/) that works with DICOMweb archives ([demo](https://viewer.ohif.org/)).
+- [Slim](https://github.com/ImagingDataCommons/slim) - Web viewer and annotation tool for DICOM whole slide microscopy images served over DICOMweb.
+- [Stone Web Viewer](https://orthanc.uclouvain.be/hg/orthanc-stone/) - WebAssembly viewer from the Orthanc project for studies stored in Orthanc or on any DICOMweb server.
 - [VolView](https://github.com/Kitware/VolView) - Web-based radiological viewer built with [Vue.js](https://vuejs.org/) and [VTK.js](https://github.com/Kitware/vtk-js) ([demo](https://volview.kitware.app/)).
 
 ## Related Lists
