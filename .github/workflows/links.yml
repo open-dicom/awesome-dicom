@@ -20,7 +20,9 @@ env:
 
 jobs:
   check-links:
-    # lychee-action downloads and runs the lychee binary, so this job's token can only read.
+    # lychee-action downloads and runs the lychee binary unverified, so this job's token can only
+    # read. lychee's output still decides the status and report that update-issue posts, so a
+    # compromised binary could at worst close or rewrite the link-check tracking issue.
     runs-on: ubuntu-latest
     outputs:
       status: ${{ steps.result.outputs.status }}
@@ -59,11 +61,16 @@ jobs:
           {
             echo "report<<$report_delimiter"
             cat lychee-report.md 2>/dev/null || true
+            echo # Make sure the delimiter starts its own line.
             echo "$report_delimiter"
           } >> "$GITHUB_OUTPUT"
 
-      - name: Fail a pull request run unless every link passed
-        if: github.event_name == 'pull_request' && steps.result.outputs.status != 'passed'
+      - name: Fail the run unless every link passed, when no issue will be updated
+        # On main, update-issue reports problems in the issue and fails the run if lychee failed.
+        # Everywhere else (pull requests, manual runs on other branches) this step does it.
+        if: >-
+          steps.result.outputs.status != 'passed' &&
+          (github.event_name == 'pull_request' || github.ref != 'refs/heads/main')
         run: |
           cat lychee-report.md 2>/dev/null || true
           exit 1
