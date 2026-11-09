@@ -12,7 +12,7 @@ New and small projects are welcome. A library or tool can be added if it:
 
 - Is about DICOM: it reads, writes, sends, stores, routes, converts, displays, validates, organizes or de-identifies DICOM data.
 - Is open source, with a license, and the entry links to its source code: its repository, or, if it has none, the page that distributes its source.
-- Has a README that explains how to install and use it, or links to documentation that does.
+- Has documentation that explains how to install and use it, in its README or linked from its README or repository page.
 - Is maintained, or is stable and still works.
 
 Datasets, Learning Resources and Hosted Tools need to be about DICOM and currently available. Related Lists are curated lists in neighboring fields that are useful to people working with DICOM and have added entries in the last two years.
@@ -28,8 +28,9 @@ If you are affiliated with what you are adding, say so in the pull request descr
 
 List each project once, in the place where most people would look for it:
 
-- A general-purpose toolkit, such as DCMTK or pydicom, or a package built mainly to be used from code, is a library, even if it ships command-line utilities.
-- A command-line tool or app built for one task goes under that task in Tools, even if it can also be imported. For example, dicom2nifti goes under Conversion. A package with no command line or app is a library.
+- A general-purpose toolkit, such as DCMTK or pydicom, is a library, even if it ships command-line utilities. So is a client, SDK or framework, such as dicomweb-client, idc-index or MONAI Deploy App SDK.
+- A package built for one task that ships a command line or app goes under that task in Tools, even if it can also be imported. For example, dicom2nifti and wsidicomizer go under Conversion.
+- A package with no command line or app is a library.
 - A viewer you run is a tool. A viewer component you embed in your own app, such as DWV, is a library.
 
 If no section fits, add one with the new entry. Add a line for a new `##` or `###` section in Contents. Related Lists and Contributing stay out of Contents.
