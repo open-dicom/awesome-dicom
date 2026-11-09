@@ -34,15 +34,17 @@ The [DICOM Standard](https://www.dicomstandard.org/) defines the formats for med
 
 ## Datasets
 
-- [The Cancer Imaging Archive (TCIA)](https://www.cancerimagingarchive.net/) - Freely available radiology and pathology cancer imaging datasets.
-- [Imaging Data Commons (IDC)](https://datacommons.cancer.gov/repository/imaging-data-commons) - Cloud-based repository of public cancer imaging data in DICOM, covering radiology, digital pathology and analysis results. Mirrors all public radiology DICOM collections in TCIA.
-- [Medical Imaging and Data Resource Center (MIDRC)](https://www.midrc.org/) - Repository of de-identified medical imaging data in DICOM, first assembled for COVID-19 research.
+- [The Cancer Imaging Archive (TCIA)](https://www.cancerimagingarchive.net/) - Radiology and pathology cancer imaging collections. Access: open, except a few collections that need a data use agreement through dbGaP.
+- [Imaging Data Commons (IDC)](https://datacommons.cancer.gov/repository/imaging-data-commons) - Cloud-based repository of public cancer imaging data in DICOM, covering radiology, digital pathology and analysis results, including every public radiology collection in TCIA. Access: open, with no registration ([portal](https://portal.imaging.datacommons.cancer.gov/)).
+- [Medical Imaging and Data Resource Center (MIDRC)](https://www.midrc.org/) - Repository of de-identified medical imaging data in DICOM, first assembled for COVID-19 research. Access: registered users who accept its data use agreement.
 
 ## Hosted Tools
 
 Free tools that run in the browser, with no installation or account. Their source code is not necessarily public.
 
-- [DICOM Library](https://www.dicomlibrary.com/) - Free online service for sharing DICOM images and videos for education and research.
+DICOM files can carry protected health information in their tags, pixel data and filenames. Use de-identified data unless a tool processes files locally, and connect a hosted viewer to an institutional DICOMweb server only with your organization's approval.
+
+- [DICOM Library](https://www.dicomlibrary.com/) - Service for sharing DICOM studies by link, which anonymizes files in the browser before uploading them and offers sample studies by modality.
 - [MiniPACS Free DICOM Viewer](https://minipacs.net/free-dicom-viewer/) - Viewer that decodes JPEG, JPEG-LS, JPEG 2000, RLE and Deflated transfer syntaxes. Files are parsed locally and never uploaded.
 - [RadRobin](https://radrobin.com) - Client-side viewer with multiplanar and 3D rendering. Opens local files without uploading them, streams from DICOMweb servers, and reads and writes DICOM SR and SEG.
 - [tresD DICOM](https://tresddicom.com) - CBCT viewer with volume rendering presets, panoramic and cephalometric reconstructions, airway views, T0/T1 superimposition and alignment of STL/PLY intraoral scans. Files never leave the computer.
@@ -100,9 +102,9 @@ Packages to use in your own code, grouped by language.
 - [dcmjs-imaging](https://github.com/PantelisGeorgiadis/dcmjs-imaging) - DICOM image and overlay rendering pipeline for Node.js and browsers using dcmjs.
 - [dicom-microscopy-viewer](https://github.com/ImagingDataCommons/dicom-microscopy-viewer) - JavaScript library for web-based visualization of DICOM VL Whole Slide Microscopy Image datasets and derived information.
 - [dicom.ts](https://github.com/wearemothership/dicom.ts) - Small DICOM parser and WebGL renderer for fast image display in the browser.
-- [dicomParser](https://github.com/cornerstonejs/dicomParser) - Dependency-free parser for DICOM Part 10 and raw byte streams in browsers and Node.js.
+- [dicomParser](https://github.com/cornerstonejs/dicomParser) - Dependency-free parser for DICOM Part 10 and raw byte streams in browsers and Node.js ([demo](https://cornerstonejs.github.io/dicomParser/examples/dumpWithDataDictionary/index.html)).
 - [dicomweb-client](https://github.com/dcmjs-org/dicomweb-client) - JavaScript client for DICOMweb services.
-- [DWV](https://github.com/ivmartel/dwv) - Zero-footprint medical image viewer library in JavaScript and HTML5 that runs in any modern browser, on desktop or mobile.
+- [DWV](https://github.com/ivmartel/dwv) - Zero-footprint medical image viewer library in JavaScript and HTML5 that runs in any modern browser, on desktop or mobile ([demo](https://ivmartel.github.io/dwv/)).
 - [Efferent.Dicom](https://github.com/Efferent-Health/Dicom.js) - Lightweight JavaScript and TypeScript library for reading and writing DICOM files in browsers and Node.js.
 - [NiiVue](https://github.com/niivue/niivue) - WebGL viewer for voxel images (including DICOM and NIfTI), meshes and tractography that embeds in any web framework ([demos](https://niivue.com/demos/)).
 
@@ -124,10 +126,10 @@ Applications and command-line tools to run, grouped by task.
 ### Conversion
 
 - [bidskit](https://github.com/jmtyszka/bidskit) - CLI for converting a directory of DICOM files into a [BIDS](https://bids.neuroimaging.io/)-compliant dataset.
-- [dcm2niix](https://github.com/rordenlab/dcm2niix) - Convert neuroimaging data from DICOM to [NIfTI](https://nifti.nimh.nih.gov/).
+- [dcm2niix](https://github.com/rordenlab/dcm2niix) - Convert neuroimaging data from DICOM to [NIfTI](https://nifti.nimh.nih.gov/) ([demo](https://niivue.github.io/niivue-dcm2niix/)).
 - [dcmqi](https://github.com/QIICR/dcmqi) - Libraries and command-line tools for converting quantitative image analysis results, such as segmentations and parametric maps, to and from DICOM.
 - [dcmstack](https://github.com/moloney/dcmstack) - DICOM to NIfTI conversion with the added ability to extract and summarize metadata from the source files.
-- [dicm2nii](https://github.com/xiangruili/dicm2nii) - Convert DICOM, as well as PAR/XML/REC, HEAD/BRIK, MGZ and BrainVoyager files, to NIfTI.
+- [dicm2nii](https://github.com/xiangruili/dicm2nii) - MATLAB tool that converts DICOM, as well as PAR/XML/REC, HEAD/BRIK, MGZ and BrainVoyager files, to NIfTI.
 - [dicom2nifti](https://github.com/icometrix/dicom2nifti) - Convert MR and CT-derived DICOM files to NIfTI.
 - [dicom2stl](https://github.com/dave3d/dicom2stl) - Convert a DICOM series to an [STL](<https://en.wikipedia.org/wiki/STL_(file_format)>) surface mesh.
 - [Dicomifier](https://github.com/lamyj/dicomifier) - Tools to convert Bruker data to DICOM files, and DICOM files to NIfTI.
@@ -166,7 +168,7 @@ Applications and command-line tools to run, grouped by task.
 
 - [dicomweb-pacs](https://github.com/knopkem/dicomweb-pacs) - DICOMweb-enabled PACS with DIMSE services, backed by an SQLite database.
 - [Dicoogle](https://github.com/dicoogle/dicoogle) - Extensible PACS archive that indexes DICOM metadata for flexible search and retrieval instead of relying on a traditional centralized database.
-- [Orthanc](https://github.com/jodogne/OrthancMirror) - Lightweight standalone DICOM server with a REST API and a plugin system.
+- [Orthanc](https://github.com/jodogne/OrthancMirror) - Lightweight standalone DICOM server with a REST API and a plugin system ([demo](https://orthanc.uclouvain.be/demo/)).
 
 ### Validation
 
@@ -188,8 +190,8 @@ Applications and command-line tools to run, grouped by task.
 - [bluelight](https://github.com/cylab-tw/bluelight) - Lightweight browser-based DICOM viewer that runs as a single-page application on any HTTP server, with plugins for MPR, MIP, volume rendering and DICOM SEG editing.
 - [dicomviewer](https://github.com/ayselafsar/dicomviewer) - Nextcloud app for viewing DICOM files, built on the OHIF Viewer.
 - [dwv-react](https://github.com/ivmartel/dwv-react) - Medical viewer using DWV and [React](https://react.dev/).
-- [OHIF Viewer](https://github.com/OHIF/Viewers) - Zero-footprint, extensible web viewer from the [Open Health Imaging Foundation](https://ohif.org/) that works with DICOMweb archives.
-- [VolView](https://github.com/Kitware/VolView) - Web-based radiological viewer built with [Vue.js](https://vuejs.org/) and [VTK.js](https://github.com/Kitware/vtk-js).
+- [OHIF Viewer](https://github.com/OHIF/Viewers) - Zero-footprint, extensible web viewer from the [Open Health Imaging Foundation](https://ohif.org/) that works with DICOMweb archives ([demo](https://viewer.ohif.org/)).
+- [VolView](https://github.com/Kitware/VolView) - Web-based radiological viewer built with [Vue.js](https://vuejs.org/) and [VTK.js](https://github.com/Kitware/vtk-js) ([demo](https://volview.kitware.app/)).
 
 ## Contributing
 
