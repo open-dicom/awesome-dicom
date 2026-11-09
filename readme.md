@@ -11,6 +11,8 @@ The [DICOM Standard](https://www.dicomstandard.org/) defines the formats for med
 ## Contents
 
 - [Datasets](#datasets)
+  - [Research Collections](#research-collections)
+  - [Test Files](#test-files)
 - [Hosted Tools](#hosted-tools)
 - [Learning Resources](#learning-resources)
   - [The Standard](#the-standard)
@@ -38,17 +40,37 @@ The [DICOM Standard](https://www.dicomstandard.org/) defines the formats for med
 
 ## Datasets
 
+### Research Collections
+
 - [The Cancer Imaging Archive (TCIA)](https://www.cancerimagingarchive.net/) - Radiology and pathology cancer imaging collections. Access: open, except a few collections that need a data use agreement through dbGaP.
 - [Imaging Data Commons (IDC)](https://datacommons.cancer.gov/repository/imaging-data-commons) - Cloud-based repository of public cancer imaging data in DICOM, covering radiology, digital pathology and analysis results, including every public radiology collection in TCIA. Access: open, with no registration ([portal](https://portal.imaging.datacommons.cancer.gov/)).
 - [Medical Imaging and Data Resource Center (MIDRC)](https://www.midrc.org/) - Repository of de-identified medical imaging data in DICOM, first assembled for COVID-19 research. Access: registered users who accept its data use agreement.
+- [MIMIC-CXR](https://physionet.org/content/mimic-cxr/) - Chest radiographs in DICOM with free-text radiology reports, from the Beth Israel Deaconess Medical Center. Access: credentialed PhysioNet users who sign its data use agreement.
+- [MIMIC-IV-ECHO](https://physionet.org/content/mimic-iv-echo/) - Echocardiograms in DICOM from the Beth Israel Deaconess Medical Center, linked to the MIMIC-IV clinical database. Access: credentialed PhysioNet users who sign its data use agreement.
+- [VinDr](https://vindr.ai/datasets) - Radiologist-annotated chest X-ray, pediatric chest X-ray, mammography and spine X-ray datasets in DICOM. Access: through PhysioNet, for users who sign a data use agreement, and VinDr-CXR also requires credentialing.
+- [fastMRI](https://fastmri.med.nyu.edu/) - Raw MRI k-space data from NYU Langone Health, plus DICOM images from 10,000 clinical knee MRI exams. Access: by application, accepting its data sharing agreement.
+- [CheXpert Plus](https://aimi.stanford.edu/datasets/chexpert-plus) - Chest radiographs in DICOM paired with radiology reports and patient demographics, from Stanford. Access: registered Redivis users who accept the dataset's terms.
+- [EMBED](https://github.com/Emory-HITI/EMBED_Open_Data) - Screening and diagnostic mammograms in DICOM from the Emory Breast Imaging Dataset, with image-level metadata and clinical findings. Access: by request, under a data use agreement.
+- [LIDC-IDRI](https://www.cancerimagingarchive.net/collection/lidc-idri/) - Thoracic CT scans with lung nodule annotations from four radiologists, hosted by TCIA. Access: open.
+
+### Test Files
+
+- [David Clunie's test images](https://www.dclunie.com/#Images) - Test images for character sets, the Deflate transfer syntax, signed pixel ranges, pixel spacing and mammography CAD, among others. Access: open.
+- [gdcmData](https://github.com/malaterre/gdcmdata) - GDCM's regression set of vendor-specific and malformed files, many named after the defect they exercise. Access: open.
+- [MIDI-B](https://www.cancerimagingarchive.net/collection/midi-b-test-midi-b-validation/) - Validation and test sets from the MIDI-B de-identification challenge, with synthetic PHI and answer keys. Access: open.
+- [OpenSlide DICOM test data](https://openslide.cs.cmu.edu/download/openslide-testdata/DICOM/) - DICOM whole slide images from several scanner vendors, including unusual encodings. Access: open.
+- [Pseudo-PHI-DICOM-Data](https://www.cancerimagingarchive.net/collection/pseudo-phi-dicom-data/) - CT, MR, PET and X-ray images with synthetic PHI in standard and private tags, for evaluating de-identification tools. Access: open.
+- [pydicom-data](https://github.com/pydicom/pydicom-data) - Test files used by pydicom's test suite. Access: open.
+- [Rubo DICOM samples](https://www.rubomedical.com/dicom_files/) - Small X-ray angiography, fluoroscopy, ultrasound and MRI samples, encoded with lossy JPEG, RLE, palette color or no compression. Access: open.
 
 ## Hosted Tools
 
-Free tools that run in the browser, with no installation or account. Their source code is not necessarily public.
+Free tools and services hosted online, with no installation or account. Their source code is not necessarily public.
 
 DICOM files can carry protected health information in their tags, pixel data and filenames. Use de-identified data unless a tool processes files locally, and connect a hosted viewer to an institutional DICOMweb server only with your organization's approval.
 
 - [DICOM Library](https://www.dicomlibrary.com/) - Service for sharing DICOM studies by link, with sample studies by modality. It anonymizes a fixed set of tags in the browser before uploading, but not burned-in text or other tags.
+- [Medical Connections DICOM Server](https://www.dicomserver.co.uk/) - Public server for testing C-STORE, C-FIND, C-GET, C-MOVE and Modality Worklist, which accepts any AE title. Other users may see uploaded files, which are deleted weekly, so send only test data.
 - [MiniPACS Free DICOM Viewer](https://minipacs.net/free-dicom-viewer/) - Viewer that decodes JPEG, JPEG-LS, JPEG 2000, RLE and Deflated transfer syntaxes. Files are parsed locally and never uploaded.
 - [RadRobin](https://radrobin.com) - Client-side viewer with multiplanar and 3D rendering. Opens local files without uploading them, streams from DICOMweb servers, and reads and writes DICOM SR and SEG.
 - [tresD DICOM](https://tresddicom.com) - CBCT viewer with volume rendering presets, panoramic and cephalometric reconstructions, airway views, T0/T1 superimposition and alignment of STL/PLY intraoral scans. Files never leave the computer.
