@@ -11,6 +11,7 @@ on:
       - .github/workflows/staleness.yml
       - .github/scripts/find_stale_entries.py
       - .github/scripts/update_report_issue.sh
+      - .github/staleness-exceptions.txt
 
 permissions:
   contents: read

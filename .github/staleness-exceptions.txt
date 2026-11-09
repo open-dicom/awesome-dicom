@@ -1,0 +1,7 @@
+# Repositories that stay in the list although their default branch has had no commits for about
+# two years, because they are widely used and stable rather than abandoned (see the archive policy
+# in contributing.md). The monthly staleness check still reports them if they are archived, moved
+# or missing.
+#
+# One repository per line: the owner/name slug, then the reason.
+cornerstonejs/dicomParser  Stable parser that Cornerstone3D depends on, with about 285k weekly npm downloads in 2026-11.

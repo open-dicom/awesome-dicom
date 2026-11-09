@@ -2,8 +2,9 @@
 
 The archive policy in contributing.md moves a project to archive.md when its repository is
 archived or deprecated, or its default branch has had no commits for about two years. This
-script checks every GitHub repository linked from an entry. It writes a Markdown report and
-exits with 1 if anything needs a maintainer's attention. Run from the repository root:
+script checks every GitHub repository linked from an entry, but doesn't report inactivity for
+those listed in .github/staleness-exceptions.txt. It writes a Markdown report and exits with 1
+if anything needs a maintainer's attention. Run from the repository root:
 
     GITHUB_TOKEN=... python3 .github/scripts/find_stale_entries.py readme.md report.md
 
@@ -32,6 +33,8 @@ SECTIONS_CHECKED_FOR_INACTIVITY = frozenset({"Libraries", "Tools"})
 TOP_LEVEL_HEADING_PATTERN = re.compile(r"^## (.+?)\s*$")
 ENTRY_PATTERN = re.compile(r"^- \[(?P<name>[^\]]+)\]\(<?(?P<url>[^)\s>]+)>?\)")
 GITHUB_REPOSITORY_PATTERN = re.compile(r"^https://github\.com/(?P<owner>[^/]+)/(?P<repository>[^/#?]+)")
+# Repositories kept on purpose despite inactivity, one "owner/name  reason" per line.
+EXCEPTIONS_PATH = Path(__file__).resolve().parent.parent / "staleness-exceptions.txt"
 
 
 @dataclass(frozen=True)
@@ -73,6 +76,30 @@ def find_linked_repositories(readme_path: Path) -> list[LinkedRepository]:
     return linked_repositories
 
 
+def load_inactivity_exceptions(exceptions_path: Path) -> frozenset[str]:
+    """Read the slugs of repositories that are kept on purpose despite inactivity.
+
+    Parameters
+    ----------
+    exceptions_path : Path
+        A text file with one ``owner/name`` slug per line, followed by a reason. Blank lines
+        and lines starting with ``#`` are ignored. A missing file means no exceptions.
+
+    Returns
+    -------
+    frozenset[str]
+        The slugs, lower-cased.
+    """
+    if not exceptions_path.exists():
+        return frozenset()
+    slugs = set()
+    for line in exceptions_path.read_text(encoding="utf-8").splitlines():
+        stripped_line = line.strip()
+        if stripped_line and not stripped_line.startswith("#"):
+            slugs.add(stripped_line.split()[0].lower())
+    return frozenset(slugs)
+
+
 def fetch_github_json(api_path: str, token: str) -> dict | list | None:
     """Fetch one GitHub REST API path and decode its JSON.
 
@@ -106,7 +133,9 @@ def fetch_github_json(api_path: str, token: str) -> dict | list | None:
         raise
 
 
-def describe_problem(linked_repository: LinkedRepository, token: str, now: datetime) -> str | None:
+def describe_problem(
+    linked_repository: LinkedRepository, token: str, now: datetime, inactivity_exceptions: frozenset[str]
+) -> str | None:
     """Return what's wrong with one linked repository, or None if nothing is.
 
     Parameters
@@ -117,6 +146,8 @@ def describe_problem(linked_repository: LinkedRepository, token: str, now: datet
         A GitHub token, or an empty string.
     now : datetime
         The current time, in UTC.
+    inactivity_exceptions : frozenset[str]
+        Lower-cased slugs that are kept on purpose, so inactivity isn't reported for them.
 
     Returns
     -------
@@ -131,6 +162,8 @@ def describe_problem(linked_repository: LinkedRepository, token: str, now: datet
     if repository["full_name"].lower() != linked_repository.slug.lower():
         return f"repository moved to {repository['full_name']}; update the link"
     if linked_repository.section not in SECTIONS_CHECKED_FOR_INACTIVITY:
+        return None
+    if linked_repository.slug.lower() in inactivity_exceptions:
         return None
 
     latest_commits = fetch_github_json(f"/repos/{linked_repository.slug}/commits?per_page=1", token)
@@ -166,9 +199,10 @@ def build_report(problems: list[tuple[LinkedRepository, str]], checked_count: in
         f"[{linked_repository.slug}](https://github.com/{linked_repository.slug}), {problem}."
         for linked_repository, problem in problems
     ]
+    attention_verb = "needs" if len(problems) == 1 else "need"
     introduction = (
         f"The monthly check of {checked_count} linked GitHub repositories found {len(problems)} "
-        f"that need attention. Under the {archive_policy_link}, an archived or inactive project moves "
+        f"that {attention_verb} attention. Under the {archive_policy_link}, an archived or inactive project moves "
         "to `archive.md`, unless it is widely used and stable rather than abandoned. A moved "
         "repository just needs its link updated."
     )
@@ -194,14 +228,15 @@ def main(readme_path: Path, report_path: Path) -> int:
     now = datetime.now(timezone.utc)
     try:
         linked_repositories = find_linked_repositories(readme_path)
+        inactivity_exceptions = load_inactivity_exceptions(EXCEPTIONS_PATH)
     except OSError as error:
-        print(f"::error::Can't read {readme_path}: {error}")
+        print(f"::error::Can't read the list or the exceptions file: {error}")
         return 2
 
     problems: list[tuple[LinkedRepository, str]] = []
     for linked_repository in linked_repositories:
         try:
-            problem = describe_problem(linked_repository, token, now)
+            problem = describe_problem(linked_repository, token, now, inactivity_exceptions)
         except (urllib.error.URLError, TimeoutError) as error:
             print(f"::error::Couldn't check {linked_repository.slug}: {error}")
             return 2
