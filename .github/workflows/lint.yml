@@ -1,0 +1,43 @@
+name: Lint
+
+on:
+  pull_request:
+    paths:
+      - readme.md
+      - contributing.md
+      - .github/workflows/lint.yml
+      - .github/scripts/check_list_structure.py
+  push:
+    branches: [main]
+    paths:
+      - readme.md
+      - contributing.md
+      - .github/workflows/lint.yml
+      - .github/scripts/check_list_structure.py
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          # awesome-lint's repository-age rule reads the first commit, so it needs the full history.
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - name: Run awesome-lint
+        env:
+          # awesome-lint reads its GitHub API token from this lowercase variable.
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+        run: npx --yes awesome-lint@2.3.0
+
+      - name: Check for duplicates and alphabetical order
+        if: success() || failure()
+        run: python3 .github/scripts/check_list_structure.py readme.md
