@@ -13,6 +13,8 @@ The [DICOM Standard](https://www.dicomstandard.org/) defines the formats for med
 - [Datasets](#datasets)
 - [Hosted Tools](#hosted-tools)
 - [Learning Resources](#learning-resources)
+  - [The Standard](#the-standard)
+  - [Guides and Tutorials](#guides-and-tutorials)
 - [Libraries](#libraries)
   - [C#](#c)
   - [C and C++](#c-and-c)
@@ -44,14 +46,14 @@ Free tools that run in the browser, with no installation or account. Their sourc
 
 DICOM files can carry protected health information in their tags, pixel data and filenames. Use de-identified data unless a tool processes files locally, and connect a hosted viewer to an institutional DICOMweb server only with your organization's approval.
 
-- [DICOM Library](https://www.dicomlibrary.com/) - Service for sharing DICOM studies by link, which anonymizes files in the browser before uploading them and offers sample studies by modality.
+- [DICOM Library](https://www.dicomlibrary.com/) - Service for sharing DICOM studies by link, with sample studies by modality. It anonymizes a fixed set of tags in the browser before uploading, but not burned-in text or other tags.
 - [MiniPACS Free DICOM Viewer](https://minipacs.net/free-dicom-viewer/) - Viewer that decodes JPEG, JPEG-LS, JPEG 2000, RLE and Deflated transfer syntaxes. Files are parsed locally and never uploaded.
 - [RadRobin](https://radrobin.com) - Client-side viewer with multiplanar and 3D rendering. Opens local files without uploading them, streams from DICOMweb servers, and reads and writes DICOM SR and SEG.
 - [tresD DICOM](https://tresddicom.com) - CBCT viewer with volume rendering presets, panoramic and cephalometric reconstructions, airway views, T0/T1 superimposition and alignment of STL/PLY intraoral scans. Files never leave the computer.
 
 ## Learning Resources
 
-#### The Standard
+### The Standard
 
 - [The DICOM Standard](https://www.dicomstandard.org/current) - Current edition of every part of the standard, in PDF, HTML, DOCX, ODT and XML.
 - [DICOM Standard Browser](https://dicom.innolitics.com/ciods) - Browsable tree of the information object definitions, modules and attributes in Part 3 of the standard.
@@ -59,7 +61,7 @@ DICOM files can carry protected health information in their tags, pixel data and
 - [DICOM Transfer Syntax Registry and Viewer Decode Matrix](https://minipacs.net/dicom-transfer-syntax/) - Every PS3.6 transfer syntax UID, with a tested matrix of which free viewers decode which syntaxes, screenshots and CSV downloads (CC BY 4.0).
 - [dicom-standard](https://github.com/innolitics/dicom-standard) - Parses the web version of the DICOM standard into human- and machine-readable JSON files.
 
-#### Guides and Tutorials
+### Guides and Tutorials
 
 - [DICOM is Easy](https://dicomiseasy.blogspot.com/2011/10/introduction-to-dicom-chapter-1.html) - Blog with a series of introductory DICOM tutorials.
 - [Work with medical imaging data and DICOM](https://learn.microsoft.com/en-us/training/modules/medical-imaging-data/) - Short Microsoft Learn module on medical imaging data in general and DICOM in particular.
@@ -130,6 +132,7 @@ Applications and command-line tools to run, grouped by task.
 - [dcmqi](https://github.com/QIICR/dcmqi) - Libraries and command-line tools for converting quantitative image analysis results, such as segmentations and parametric maps, to and from DICOM.
 - [dcmstack](https://github.com/moloney/dcmstack) - DICOM to NIfTI conversion with the added ability to extract and summarize metadata from the source files.
 - [dicm2nii](https://github.com/xiangruili/dicm2nii) - MATLAB tool that converts DICOM, as well as PAR/XML/REC, HEAD/BRIK, MGZ and BrainVoyager files, to NIfTI.
+- [dicom-ecg-plot](https://github.com/marcodebe/dicom-ecg-plot) - Render 12-lead ECG waveforms from DICOM files to PDF, PNG, SVG and other image formats ([demo](https://ecg.galliera.it/)).
 - [dicom2nifti](https://github.com/icometrix/dicom2nifti) - Convert MR and CT-derived DICOM files to NIfTI.
 - [dicom2stl](https://github.com/dave3d/dicom2stl) - Convert a DICOM series to an [STL](<https://en.wikipedia.org/wiki/STL_(file_format)>) surface mesh.
 - [Dicomifier](https://github.com/lamyj/dicomifier) - Tools to convert Bruker data to DICOM files, and DICOM files to NIfTI.
@@ -179,7 +182,6 @@ Applications and command-line tools to run, grouped by task.
 #### Desktop
 
 - [AlizaMS](https://github.com/AlizaMedicalImaging/AlizaMS) - Cross-platform DICOM viewer with 2D and 3D views, MPR and volume rendering.
-- [dicom-ecg-plot](https://github.com/marcodebe/dicom-ecg-plot) - Plot ECG data from DICOM ([demo](https://ecg.galliera.it/)).
 - [dicom-nifti-viewer-vscode](https://github.com/theluckystrike/dicom-nifti-viewer-vscode) - VS Code extension that opens DICOM, DICOMDIR and NIfTI files with CT window presets, axial, coronal and sagittal views and a searchable tag table.
 - [FSLeyes](https://github.com/pauldmccarthy/fsleyes) - Cross-platform viewer for NIfTI and DICOM images, from the FSL neuroimaging suite.
 - [MRIcroGL](https://github.com/rordenlab/MRIcroGL) - Cross-platform volume renderer for DICOM, NIfTI and other voxel formats, with a drag-and-drop interface and Python scripting.
@@ -195,10 +197,10 @@ Applications and command-line tools to run, grouped by task.
 
 ## Related Lists
 
+- [Awesome Digital and Computational Pathology](https://github.com/open-pathology/awesome-pathology) - Software, datasets and publications for digital and computational pathology, including whole slide image viewers.
 - [Awesome Health](https://github.com/kakoni/awesome-healthcare) - Open source healthcare software, libraries, tools and resources.
 - [Awesome HL7 and DICOM](https://github.com/MichaelLeeHobbs/awesome-hl7-dicom) - HL7 and DICOM resources, tools and field notes for healthcare integration.
 - [Awesome Medical Dataset](https://github.com/openmedlab/Awesome-Medical-Dataset) - Medical imaging and health record datasets, with tools and tutorials for working with them.
-- [Awesome Medical Imaging](https://github.com/fepegar/awesome-medical-imaging) - Software for medical imaging research.
 - [Awesome Neuroimaging](https://github.com/NPACore/awesome-neuroimaging) - Tools for exploring, organizing and analyzing brain images and recordings, with a focus on MRI.
 
 ## Contributing
