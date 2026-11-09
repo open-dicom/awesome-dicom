@@ -132,7 +132,7 @@ Applications and command-line tools to run, grouped by task.
 - [dcmqi](https://github.com/QIICR/dcmqi) - Libraries and command-line tools for converting quantitative image analysis results, such as segmentations and parametric maps, to and from DICOM.
 - [dcmstack](https://github.com/moloney/dcmstack) - DICOM to NIfTI conversion with the added ability to extract and summarize metadata from the source files.
 - [dicm2nii](https://github.com/xiangruili/dicm2nii) - MATLAB tool that converts DICOM, as well as PAR/XML/REC, HEAD/BRIK, MGZ and BrainVoyager files, to NIfTI.
-- [dicom-ecg-plot](https://github.com/marcodebe/dicom-ecg-plot) - Render 12-lead ECG waveforms from DICOM files to PDF, PNG, SVG and other image formats ([demo](https://ecg.galliera.it/)).
+- [dicom-ecg-plot](https://github.com/marcodebe/dicom-ecg-plot) - Render 12-lead ECG waveforms from DICOM files to PDF, PNG, SVG and other formats ([demo](https://ecg.galliera.it/)).
 - [dicom2nifti](https://github.com/icometrix/dicom2nifti) - Convert MR and CT-derived DICOM files to NIfTI.
 - [dicom2stl](https://github.com/dave3d/dicom2stl) - Convert a DICOM series to an [STL](<https://en.wikipedia.org/wiki/STL_(file_format)>) surface mesh.
 - [Dicomifier](https://github.com/lamyj/dicomifier) - Tools to convert Bruker data to DICOM files, and DICOM files to NIfTI.
