@@ -2,7 +2,7 @@ name: Link check
 
 on:
   schedule:
-    - cron: "0 6 * * 1" # 06:00 UTC every Monday
+    - cron: "17 6 * * 1" # 06:17 UTC every Monday, off the hour, when GitHub delays scheduled runs
   workflow_dispatch:
   # Run on pull requests that change the check, to test it. Those runs fail on broken links
   # and don't touch issues.
@@ -14,20 +14,24 @@ on:
 
 permissions:
   contents: read
-  issues: write
 
 env:
   ISSUE_TITLE: "Link check: broken links"
 
 jobs:
   check-links:
+    # lychee-action downloads and runs the lychee binary, so this job's token can only read.
     runs-on: ubuntu-latest
+    outputs:
+      status: ${{ steps.result.outputs.status }}
+      report: ${{ steps.result.outputs.report }}
     steps:
       - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
 
       - name: Check links
         id: lychee
-        # Third-party action in a job that can write issues, so it's pinned to a commit.
         uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2.9.0
         with:
           args: >-
@@ -40,22 +44,48 @@ jobs:
           output: lychee-report.md
           fail: false
 
-      - name: Open, update or close the tracking issue
-        if: github.event_name != 'pull_request'
+      - name: Record the result
+        id: result
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           LYCHEE_EXIT_CODE: ${{ steps.lychee.outputs.exit_code }}
         run: |
-          # The issue script expects 0 (passed), 1 (found problems) or anything else (failed).
           case "$LYCHEE_EXIT_CODE" in
-            0) check_exit_code=0 ;;
-            2) check_exit_code=1 ;; # lychee found broken links
-            *) check_exit_code=2 ;; # lychee itself failed
+            0) status=passed ;;
+            2) status=found-problems ;; # lychee found broken links
+            *) status=failed ;; # lychee itself failed
           esac
-          bash .github/scripts/update_report_issue.sh "$ISSUE_TITLE" lychee-report.md "$check_exit_code"
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          report_delimiter="REPORT_$(openssl rand -hex 16)"
+          {
+            echo "report<<$report_delimiter"
+            cat lychee-report.md 2>/dev/null || true
+            echo "$report_delimiter"
+          } >> "$GITHUB_OUTPUT"
 
-      - name: Fail a pull request run if links are broken
-        if: github.event_name == 'pull_request' && steps.lychee.outputs.exit_code != '0'
+      - name: Fail a pull request run unless every link passed
+        if: github.event_name == 'pull_request' && steps.result.outputs.status != 'passed'
         run: |
-          cat lychee-report.md
+          cat lychee-report.md 2>/dev/null || true
           exit 1
+
+  update-issue:
+    # Only runs on main's list update the tracking issue: never pull requests or other branches.
+    needs: check-links
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Open, update or close the tracking issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CHECK_STATUS: ${{ needs.check-links.outputs.status }}
+          REPORT: ${{ needs.check-links.outputs.report }}
+        run: |
+          printf '%s\n' "$REPORT" > lychee-report.md
+          bash .github/scripts/update_report_issue.sh "$ISSUE_TITLE" lychee-report.md "$CHECK_STATUS"
