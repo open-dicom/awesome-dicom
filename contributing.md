@@ -11,8 +11,8 @@ project you agree to abide by its terms.
 New and small projects are welcome. A library or tool can be added if it:
 
 - Is about DICOM: it reads, writes, sends, stores, routes, converts, displays, validates, organizes or de-identifies DICOM data.
-- Is open source, with a license, and the entry links to its source code: its repository, or the page that distributes its source.
-- Has a README that explains how to install and use it.
+- Is open source, with a license, and the entry links to its source code: its repository, or, if it has none, the page that distributes its source.
+- Has a README that explains how to install and use it, or links to documentation that does.
 - Is maintained, or is stable and still works.
 
 Datasets, Learning Resources and Hosted Tools need to be about DICOM and currently available. Related Lists are curated lists in neighboring fields that are useful to people working with DICOM and have added entries in the last two years.
@@ -24,11 +24,11 @@ If you are affiliated with what you are adding, say so in the pull request descr
 - **Libraries** are packages you use in your own code. They are grouped by language.
 - **Tools** are applications and command-line tools you run. They are grouped by task: Conversion, De-identification, Dose Monitoring, File Management, Gateways and Routing, Radiation Therapy, Research Platforms, Servers and PACS, Validation, and Viewers.
 - **Hosted Tools** are free tools and services hosted online that need no installation or account. Their source doesn't have to be public.
-- **Datasets** hold DICOM data, grouped into Research Collections and Test Files. **Learning Resources** help people understand the standard and work with it.
+- **Datasets** hold DICOM data, grouped into Research Collections and Test Files. **Learning Resources** help people understand the standard and work with it, grouped into The Standard, Guides and Tutorials, Books, and Community.
 
 List each project once, in the place where most people would look for it:
 
-- A general-purpose toolkit, such as DCMTK or pydicom, is a library, even if it ships command-line utilities.
+- A general-purpose toolkit, such as DCMTK or pydicom, or a package built mainly to be used from code, is a library, even if it ships command-line utilities.
 - A command-line tool or app built for one task goes under that task in Tools, even if it can also be imported. For example, dicom2nifti goes under Conversion. A package with no command line or app is a library.
 - A viewer you run is a tool. A viewer component you embed in your own app, such as DWV, is a library.
 
