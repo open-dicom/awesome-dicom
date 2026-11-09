@@ -1,0 +1,49 @@
+name: Suggest a resource
+description: Suggest a library, tool, dataset or learning resource for the list.
+labels: ["new entry"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the suggestion! A pull request is even better: see the [contribution guidelines](https://github.com/open-dicom/awesome-dicom/blob/main/contributing.md). New and small projects are welcome.
+  - type: input
+    id: name
+    attributes:
+      label: Name
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Link
+      description: For a library or tool, link its source code.
+    validations:
+      required: true
+  - type: dropdown
+    id: section
+    attributes:
+      label: Section
+      options:
+        - Datasets
+        - Hosted Tools
+        - Learning Resources
+        - Libraries
+        - Tools
+        - Related Lists
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What it does
+      description: One sentence, as it would appear in the list.
+    validations:
+      required: true
+  - type: textarea
+    id: affiliation
+    attributes:
+      label: Affiliation
+      description: Are you involved with it, for example as an author, maintainer or employee?
+    validations:
+      required: true
