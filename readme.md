@@ -17,6 +17,8 @@ The [DICOM Standard](https://www.dicomstandard.org/) defines the formats for med
 - [Learning Resources](#learning-resources)
   - [The Standard](#the-standard)
   - [Guides and Tutorials](#guides-and-tutorials)
+  - [Books](#books)
+  - [Community](#community)
 - [Libraries](#libraries)
   - [C#](#c)
   - [C and C++](#c-and-c)
@@ -83,13 +85,41 @@ DICOM files can carry protected health information in their tags, pixel data and
 - [DICOM Standard Browser](https://dicom.innolitics.com/ciods) - Browsable tree of the information object definitions, modules and attributes in Part 3 of the standard.
 - [Saga DICOM Standard Browser](https://saga-it.com/dicom/spec) - Cross-linked index of PS3 covering attributes, CIODs, modules, SOP classes, transfer syntaxes and VRs, alongside HL7 v2 and FHIR mapping references.
 - [DICOM Transfer Syntax Registry and Viewer Decode Matrix](https://minipacs.net/dicom-transfer-syntax/) - Every PS3.6 transfer syntax UID, with a tested matrix of which free viewers decode which syntaxes, screenshots and CSV downloads (CC BY 4.0).
-- [dicom-standard](https://github.com/innolitics/dicom-standard) - Parses the web version of the DICOM standard into human- and machine-readable JSON files.
+- [dicom-standard](https://github.com/innolitics/dicom-standard) - Parses the web version of the DICOM standard into human- and machine-readable JSON files, last published for release 2024b.
+- [PS3.5 Data Structures and Encoding](https://dicom.nema.org/medical/dicom/current/output/html/part05.html) - Value representations, transfer syntaxes, character sets and the encoding of data sets.
+- [PS3.6 Data Dictionary](https://dicom.nema.org/medical/dicom/current/output/html/part06.html) - Registry of every standard data element, with its tag, VR and multiplicity, and of every registered UID.
+- [PS3.15 Security and System Management Profiles](https://dicom.nema.org/medical/dicom/current/output/html/part15.html) - Security profiles, including the attribute confidentiality profiles that de-identification tools follow.
+- [PS3.18 Web Services](https://dicom.nema.org/medical/dicom/current/output/html/part18.html) - Specification of DICOMweb, including QIDO-RS, WADO-RS, STOW-RS and UPS-RS, and of the DICOM JSON model.
+- [DICOM Conformance Statement Template](https://dicom.nema.org/medical/dicom/current/output/chtml/part02/chapter_N.html) - Annex N of PS3.2, the normative template that conformance statements follow.
+- [DICOMweb](https://www.dicomstandard.org/using/dicomweb) - Official overview of the DICOMweb services, with a downloadable cheat sheet.
+- [DICOM Standard Status](https://www.dclunie.com/dicom-status/status.html) - David Clunie's tracker of the status of every part, supplement and change proposal.
 
 ### Guides and Tutorials
 
 - [DICOM is Easy](https://dicomiseasy.blogspot.com/2011/10/introduction-to-dicom-chapter-1.html) - Blog with a series of introductory DICOM tutorials.
 - [Work with medical imaging data and DICOM](https://learn.microsoft.com/en-us/training/modules/medical-imaging-data/) - Short Microsoft Learn module on medical imaging data in general and DICOM in particular.
 - [Saravanan Subramanian's DICOM tutorials](https://saravanansubramanian.com/dicom/) - Articles and tutorials on working with DICOM in Java and .NET.
+- [Understanding DICOM with Orthanc](https://orthanc.uclouvain.be/book/dicom-guide.html) - Introduction to the DICOM file format, model of the real world, identifiers and network protocol, with hands-on examples using Orthanc.
+- [dcm4che DICOMweb guide](https://dcm4che.github.io/dicomweb/) - Overview of the DICOMweb services and their DIMSE equivalents, with curl examples against dcm4chee-arc.
+- [Introduction to DICOM](https://learn.canceridc.dev/dicom/introduction) - DICOM and its data model, from the Imaging Data Commons user guide.
+- [IDC-Tutorials](https://github.com/ImagingDataCommons/IDC-Tutorials) - Notebooks for finding, downloading and analyzing DICOM data from Imaging Data Commons.
+- [Innolitics DICOM Articles and Videos](https://innolitics.com/articles/dicom/) - Articles and videos explaining DICOM concepts, from the makers of the DICOM Standard Browser.
+- [DICOM presentations](https://www.dicomstandard.org/presentations) - Slides from DICOM Standards Committee conferences and tutorials.
+- [IHE Radiology Technical Framework](https://profiles.ihe.net/RAD/index.html) - Integration profiles, such as Scheduled Workflow, that define how radiology systems use DICOM and HL7 together.
+
+### Books
+
+- [Digital Imaging and Communications in Medicine (DICOM)](https://link.springer.com/book/10.1007/978-3-642-10850-1) - Oleg Pianykh's practical introduction to the standard (Springer, 2nd edition, 2012).
+- [DICOM Structured Reporting](https://www.dclunie.com/pixelmed/DICOMSR.book.pdf) - David Clunie's book on DICOM SR, free as a PDF.
+
+### Community
+
+- [comp.protocols.dicom](https://groups.google.com/g/comp.protocols.dicom) - Long-running discussion group for DICOM implementation questions.
+- [dcm4che group](https://groups.google.com/g/dcm4che) - Discussion group for the dcm4che toolkit and the dcm4chee archive.
+- [IDC Forum](https://discourse.canceridc.dev/) - Forum for questions about Imaging Data Commons data and tools.
+- [OHIF Community](https://community.ohif.org/) - Forum for users and developers of the OHIF Viewer.
+- [Orthanc Discourse](https://discourse.orthanc-server.org/) - Forum for users and developers of Orthanc.
+- [pydicom Discussions](https://github.com/pydicom/pydicom/discussions) - Questions and answers about pydicom.
 
 ## Libraries
 
