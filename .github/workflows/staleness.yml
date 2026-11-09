@@ -1,0 +1,46 @@
+name: Staleness check
+
+on:
+  schedule:
+    - cron: "0 6 1 * *" # 06:00 UTC on the first of each month
+  workflow_dispatch:
+  # Run on pull requests that change the check, to test it. Those runs report in the log
+  # and don't touch issues.
+  pull_request:
+    paths:
+      - .github/workflows/staleness.yml
+      - .github/scripts/find_stale_entries.py
+      - .github/scripts/update_report_issue.sh
+
+permissions:
+  contents: read
+  issues: write
+
+env:
+  ISSUE_TITLE: "Staleness check: entries to review"
+
+jobs:
+  find-stale-entries:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Check linked GitHub repositories
+        id: staleness
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set +e
+          python3 .github/scripts/find_stale_entries.py readme.md staleness-report.md
+          echo "exit_code=$?" >> "$GITHUB_OUTPUT"
+
+      - name: Open, update or close the tracking issue
+        if: github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CHECK_EXIT_CODE: ${{ steps.staleness.outputs.exit_code }}
+        run: bash .github/scripts/update_report_issue.sh "$ISSUE_TITLE" staleness-report.md "$CHECK_EXIT_CODE"
+
+      - name: Fail a pull request run if the check couldn't complete
+        if: github.event_name == 'pull_request' && steps.staleness.outputs.exit_code == '2'
+        run: exit 1

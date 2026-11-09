@@ -1,0 +1,60 @@
+name: Link check
+
+on:
+  schedule:
+    - cron: "0 6 * * 1" # 06:00 UTC every Monday
+  workflow_dispatch:
+  # Run on pull requests that change the check, to test it. Those runs fail on broken links
+  # and don't touch issues.
+  pull_request:
+    paths:
+      - .github/workflows/links.yml
+      - .github/scripts/update_report_issue.sh
+      - .lycheeignore
+
+permissions:
+  contents: read
+  issues: write
+
+env:
+  ISSUE_TITLE: "Link check: broken links"
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Check links
+        id: lychee
+        uses: lycheeverse/lychee-action@v2.9.0
+        with:
+          args: >-
+            --no-progress
+            --max-retries 3
+            --retry-wait-time 10
+            --timeout 30
+            --accept 200..=299,429
+            readme.md archive.md contributing.md
+          output: lychee-report.md
+          fail: false
+
+      - name: Open, update or close the tracking issue
+        if: github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LYCHEE_EXIT_CODE: ${{ steps.lychee.outputs.exit_code }}
+        run: |
+          # The issue script expects 0 (passed), 1 (found problems) or anything else (failed).
+          case "$LYCHEE_EXIT_CODE" in
+            0) check_exit_code=0 ;;
+            2) check_exit_code=1 ;; # lychee found broken links
+            *) check_exit_code=2 ;; # lychee itself failed
+          esac
+          bash .github/scripts/update_report_issue.sh "$ISSUE_TITLE" lychee-report.md "$check_exit_code"
+
+      - name: Fail a pull request run if links are broken
+        if: github.event_name == 'pull_request' && steps.lychee.outputs.exit_code != '0'
+        run: |
+          cat lychee-report.md
+          exit 1
