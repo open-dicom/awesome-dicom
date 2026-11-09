@@ -48,12 +48,12 @@ The [DICOM Standard](https://www.dicomstandard.org/) defines the formats for med
 - [Imaging Data Commons (IDC)](https://datacommons.cancer.gov/repository/imaging-data-commons) - Cloud-based repository of public cancer imaging data in DICOM, covering radiology, digital pathology and analysis results, including every public radiology collection in TCIA. Access: open, with no registration ([portal](https://portal.imaging.datacommons.cancer.gov/)).
 - [Medical Imaging and Data Resource Center (MIDRC)](https://www.midrc.org/) - Repository of de-identified medical imaging data in DICOM, first assembled for COVID-19 research. Access: registered users who accept its data use agreement.
 - [MIMIC-CXR](https://physionet.org/content/mimic-cxr/) - Chest radiographs in DICOM with free-text radiology reports, from the Beth Israel Deaconess Medical Center. Access: credentialed PhysioNet users who sign its data use agreement.
-- [MIMIC-IV-ECHO](https://physionet.org/content/mimic-iv-echo/) - Echocardiograms in DICOM from the Beth Israel Deaconess Medical Center, linked to the MIMIC-IV clinical database. Access: credentialed PhysioNet users who sign its data use agreement.
+- [MIMIC-IV-Echo](https://physionet.org/content/mimic-iv-echo/) - Echocardiograms in DICOM from the Beth Israel Deaconess Medical Center, linked to the MIMIC-IV clinical database. Access: credentialed PhysioNet users who sign its data use agreement.
 - [VinDr](https://vindr.ai/datasets) - Radiologist-annotated chest X-ray, pediatric chest X-ray, mammography and spine X-ray datasets in DICOM. Access: through PhysioNet, for users who sign a data use agreement, and VinDr-CXR also requires credentialing.
 - [fastMRI](https://fastmri.med.nyu.edu/) - Raw MRI k-space data from NYU Langone Health, plus DICOM images from 10,000 clinical knee MRI exams. Access: by application, accepting its data sharing agreement.
 - [CheXpert Plus](https://aimi.stanford.edu/datasets/chexpert-plus) - Chest radiographs in DICOM paired with radiology reports and patient demographics, from Stanford. Access: registered Redivis users who accept the dataset's terms.
-- [EMBED](https://github.com/Emory-HITI/EMBED_Open_Data) - Screening and diagnostic mammograms in DICOM from the Emory Breast Imaging Dataset, with image-level metadata and clinical findings. Access: by request, under a data use agreement.
-- [LIDC-IDRI](https://www.cancerimagingarchive.net/collection/lidc-idri/) - Thoracic CT scans with lung nodule annotations from four radiologists, hosted by TCIA. Access: open.
+- [EMBED](https://registry.opendata.aws/emory-breast-imaging-dataset-embed/) - Screening and diagnostic mammograms in DICOM from the Emory Breast Imaging Dataset, with image-level metadata and clinical findings. Access: by request, under a data use agreement.
+- [LIDC-IDRI](https://www.cancerimagingarchive.net/collection/lidc-idri/) - Thoracic CT scans with lung nodule annotations from four radiologists, plus some chest radiographs, hosted by TCIA. Access: open.
 
 ### Test Files
 
@@ -63,7 +63,7 @@ The [DICOM Standard](https://www.dicomstandard.org/) defines the formats for med
 - [OpenSlide DICOM test data](https://openslide.cs.cmu.edu/download/openslide-testdata/DICOM/) - DICOM whole slide images from several scanner vendors, including unusual encodings. Access: open.
 - [Pseudo-PHI-DICOM-Data](https://www.cancerimagingarchive.net/collection/pseudo-phi-dicom-data/) - CT, MR, PET and X-ray images with synthetic PHI in standard and private tags, for evaluating de-identification tools. Access: open.
 - [pydicom-data](https://github.com/pydicom/pydicom-data) - Test files used by pydicom's test suite. Access: open.
-- [Rubo DICOM samples](https://www.rubomedical.com/dicom_files/) - Small X-ray angiography, fluoroscopy, ultrasound and MRI samples, encoded with lossy JPEG, RLE, palette color or no compression. Access: open.
+- [Rubo DICOM samples](https://www.rubomedical.com/dicom_files/) - Small X-ray angiography, fluoroscopy, ultrasound and MRI samples, encoded with lossy JPEG, RLE or no compression, including a palette color image. Access: open.
 
 ## Hosted Tools
 
@@ -72,7 +72,7 @@ Free tools and services hosted online, with no installation or account. Their so
 DICOM files can carry protected health information in their tags, pixel data and filenames. Use de-identified data unless a tool processes files locally, and connect a hosted viewer to an institutional DICOMweb server only with your organization's approval.
 
 - [DICOM Library](https://www.dicomlibrary.com/) - Service for sharing DICOM studies by link, with sample studies by modality. It anonymizes a fixed set of tags in the browser before uploading, but not burned-in text or other tags.
-- [Medical Connections DICOM Server](https://www.dicomserver.co.uk/) - Public server for testing C-STORE, C-FIND, C-GET, C-MOVE and Modality Worklist, which accepts any AE title. Other users may see uploaded files, which are deleted weekly, so send only test data.
+- [Medical Connections DICOM Server](https://www.dicomserver.co.uk/) - Public server for testing C-STORE, C-FIND, C-GET, C-MOVE and Modality Worklist, which accepts any AE title. Uploaded files are visible to all users and deleted weekly, and DIMSE traffic is not encrypted, so send only test data.
 - [MiniPACS Free DICOM Viewer](https://minipacs.net/free-dicom-viewer/) - Viewer that decodes JPEG, JPEG-LS, JPEG 2000, RLE and Deflated transfer syntaxes. Files are parsed locally and never uploaded.
 - [RadRobin](https://radrobin.com) - Client-side viewer with multiplanar and 3D rendering. Opens local files without uploading them, streams from DICOMweb servers, and reads and writes DICOM SR and SEG.
 - [tresD DICOM](https://tresddicom.com) - CBCT viewer with volume rendering presets, panoramic and cephalometric reconstructions, airway views, T0/T1 superimposition and alignment of STL/PLY intraoral scans. Files never leave the computer.
@@ -103,22 +103,21 @@ DICOM files can carry protected health information in their tags, pixel data and
 - [dcm4che DICOMweb guide](https://dcm4che.github.io/dicomweb/) - Overview of the DICOMweb services and their DIMSE equivalents, with curl examples against dcm4chee-arc.
 - [Introduction to DICOM](https://learn.canceridc.dev/dicom/introduction) - DICOM and its data model, from the Imaging Data Commons user guide.
 - [IDC-Tutorials](https://github.com/ImagingDataCommons/IDC-Tutorials) - Notebooks for finding, downloading and analyzing DICOM data from Imaging Data Commons.
-- [Innolitics DICOM Articles and Videos](https://innolitics.com/articles/dicom/) - Articles and videos explaining DICOM concepts, from the makers of the DICOM Standard Browser.
-- [DICOM presentations](https://www.dicomstandard.org/presentations) - Slides from DICOM Standards Committee conferences and tutorials.
+- [DICOM presentations](https://www.dicomstandard.org/presentations) - Archive of slides from DICOM Standards Committee conferences and tutorials, from 2000 to 2018.
 - [IHE Radiology Technical Framework](https://profiles.ihe.net/RAD/index.html) - Integration profiles, such as Scheduled Workflow, that define how radiology systems use DICOM and HL7 together.
 
 ### Books
 
 - [Digital Imaging and Communications in Medicine (DICOM)](https://link.springer.com/book/10.1007/978-3-642-10850-1) - Oleg Pianykh's practical introduction to the standard (Springer, 2nd edition, 2012).
-- [DICOM Structured Reporting](https://www.dclunie.com/pixelmed/DICOMSR.book.pdf) - David Clunie's book on DICOM SR, free as a PDF.
+- [DICOM Structured Reporting](https://www.dclunie.com/pixelmed/DICOMSR.book.pdf) - David Clunie's book on DICOM SR (PixelMed Publishing, 2000), free as a PDF.
 
 ### Community
 
-- [comp.protocols.dicom](https://groups.google.com/g/comp.protocols.dicom) - Long-running discussion group for DICOM implementation questions.
+- [comp.protocols.dicom](https://groups.google.com/g/comp.protocols.dicom) - Read-only archive of the long-running Usenet group for DICOM implementation questions.
 - [dcm4che group](https://groups.google.com/g/dcm4che) - Discussion group for the dcm4che toolkit and the dcm4chee archive.
 - [IDC Forum](https://discourse.canceridc.dev/) - Forum for questions about Imaging Data Commons data and tools.
 - [OHIF Community](https://community.ohif.org/) - Forum for users and developers of the OHIF Viewer.
-- [Orthanc Discourse](https://discourse.orthanc-server.org/) - Forum for users and developers of Orthanc.
+- [Orthanc Discourse](https://discourse.orthanc-server.org/) - Forum for users and developers of Orthanc, where new accounts are by invitation.
 - [pydicom Discussions](https://github.com/pydicom/pydicom/discussions) - Questions and answers about pydicom.
 
 ## Libraries
@@ -128,7 +127,7 @@ Packages to use in your own code, grouped by language.
 ### C#
 
 - [fo-dicom](https://github.com/fo-dicom/fo-dicom) - Fellow Oak DICOM, a .NET toolkit for reading, writing, rendering and networking DICOM.
-- [fo-dicom.Codecs](https://github.com/Efferent-Health/fo-dicom.Codecs) - Native JPEG, JPEG-LS, JPEG 2000 and RLE codecs for fo-dicom on Windows, Linux and macOS.
+- [fo-dicom.Codecs](https://github.com/Efferent-Health/fo-dicom.Codecs) - Native JPEG, JPEG-LS, JPEG 2000, HTJ2K and RLE codecs for fo-dicom on Windows, Linux and macOS.
 - [MingRay (UnityVolumeRendering)](https://github.com/mlavik1/UnityVolumeRendering) - Volume renderer for Unity3D that imports DICOM and NRRD datasets.
 
 ### C and C++
@@ -148,12 +147,12 @@ Packages to use in your own code, grouped by language.
 ### Java
 
 - [dcm4che](https://github.com/dcm4che/dcm4che) - DICOM toolkit and library with command-line utilities for file handling and networking.
-- [PixelMed Java DICOM Toolkit](https://www.pixelmed.com/dicomtoolkit.html) - Toolkit and applications for DICOM files and networking, validation, structured reports and de-identification.
+- [PixelMed Java DICOM Toolkit](https://www.dclunie.com/pixelmed/software/index.html) - Toolkit and applications for DICOM files and networking, validation, structured reports and de-identification.
 
 ### JavaScript
 
 - [@cosyte/dicom](https://github.com/cosyte/dicom) - Dependency-free DICOM Part 10 parser and serializer for Node.js and TypeScript, built to read metadata from vendor-quirky files without decoding pixel data.
-- [@itk-wasm/dicom](https://github.com/InsightSoftwareConsortium/ITK-Wasm/tree/main/packages/dicom) - WebAssembly builds of DCMTK and GDCM functions for reading DICOM series, tags and encapsulated PDFs, and reading or writing segmentations and RT structure sets, in browsers, Node.js and Python.
+- [@itk-wasm/dicom](https://github.com/InsightSoftwareConsortium/ITK-Wasm/tree/main/packages/dicom/typescript) - WebAssembly builds of DCMTK and GDCM functions for reading DICOM series, tags and encapsulated PDFs, reading and writing segmentations, and writing RT structure sets, in browsers and Node.js.
 - [Cornerstone3D](https://github.com/cornerstonejs/cornerstone3D) - Libraries for building web-based medical imaging applications, with GPU-accelerated stack, MPR and volume rendering, annotation and segmentation tools, and a DICOM image loader.
 - [dcmjs](https://github.com/dcmjs-org/dcmjs) - Read, write and manipulate DICOM objects, including segmentations and structured reports, in browsers and Node.js.
 - [dcmjs-codecs](https://github.com/PantelisGeorgiadis/dcmjs-codecs) - DICOM file and dataset transcoding for Node.js and browsers using dcmjs.
@@ -187,7 +186,6 @@ Packages to use in your own code, grouped by language.
 ### R
 
 - [divest](https://github.com/jonclayden/divest) - Sorts DICOM files and converts them to NIfTI-compatible images with their metadata, using dcm2niix.
-- [espadon](https://cran.r-project.org/package=espadon) - Reads, processes and exports DICOM and DICOM RT images, structures and doses, with patient-oriented 2D and 3D visualization.
 
 ### Rust
 
@@ -201,7 +199,7 @@ Applications and command-line tools to run, grouped by task.
 
 - [BIDScoin](https://github.com/Donders-Institute/bidscoin) - Converts DICOM and other neuroimaging source data to BIDS, with a GUI for mapping series to BIDS names.
 - [bidskit](https://github.com/jmtyszka/bidskit) - CLI for converting a directory of DICOM files into a [BIDS](https://bids.neuroimaging.io/)-compliant dataset.
-- [Dcm2Bids](https://github.com/UNFmontreal/Dcm2Bids) - Organizes dcm2niix output into a BIDS dataset, using a configuration file that maps series metadata to BIDS names.
+- [Dcm2Bids](https://github.com/UNFmontreal/Dcm2Bids) - Converts DICOM to a BIDS dataset by running dcm2niix, using a configuration file that maps series metadata to BIDS names.
 - [dcm2niix](https://github.com/rordenlab/dcm2niix) - Convert neuroimaging data from DICOM to [NIfTI](https://nifti.nimh.nih.gov/) ([demo](https://niivue.github.io/niivue-dcm2niix/)).
 - [dcmqi](https://github.com/QIICR/dcmqi) - Libraries and command-line tools for converting quantitative image analysis results, such as segmentations and parametric maps, to and from DICOM.
 - [dcmstack](https://github.com/moloney/dcmstack) - DICOM to NIfTI conversion with the added ability to extract and summarize metadata from the source files.
@@ -225,7 +223,7 @@ Applications and command-line tools to run, grouped by task.
 
 ### Dose Monitoring
 
-- [OpenREM](https://bitbucket.org/openrem/openrem) - Web application that collects patient radiation dose data from DICOM Radiation Dose Structured Reports and image headers, for auditing.
+- [OpenREM](https://gitlab.com/openrem/OpenREM) - Web application that collects patient radiation dose data from DICOM Radiation Dose Structured Reports and image headers, for auditing.
 
 ### File Management
 
@@ -245,8 +243,8 @@ Applications and command-line tools to run, grouped by task.
 
 - [DICOMautomaton](https://github.com/hdclark/DICOMautomaton) - Multipurpose tool for analyzing medical physics data, with a focus on automation.
 - [OnkoDICOM](https://github.com/didymo/OnkoDICOM) - DICOM RT viewer with tools for radiation oncology research.
-- [Plastimatch](https://gitlab.com/plastimatch/plastimatch) - Command-line toolkit for image registration and processing in radiotherapy, which converts DICOM RT structure sets, doses and plans to and from other formats.
-- [SlicerRT](https://github.com/SlicerRt/SlicerRT) - 3D Slicer extension that imports and exports DICOM RT structure sets, doses, plans and images, with dose comparison and contouring tools.
+- [Plastimatch](https://gitlab.com/plastimatch/plastimatch) - Command-line toolkit for image registration and processing in radiotherapy, which converts DICOM RT structure sets and doses to and from other formats.
+- [SlicerRT](https://github.com/SlicerRt/SlicerRT) - 3D Slicer extension that imports DICOM RT structure sets, doses, plans and images and exports structure sets and doses, with dose analysis, contour analysis and treatment planning tools.
 
 ### Research Platforms
 
@@ -261,7 +259,7 @@ Applications and command-line tools to run, grouped by task.
 - [dicomweb-pacs](https://github.com/knopkem/dicomweb-pacs) - DICOMweb-enabled PACS with DIMSE services, backed by an SQLite database.
 - [Dicoogle](https://github.com/dicoogle/dicoogle) - Extensible PACS archive that indexes DICOM metadata for flexible search and retrieval instead of relying on a traditional centralized database.
 - [Orthanc](https://github.com/jodogne/OrthancMirror) - Lightweight standalone DICOM server with a REST API and a plugin system ([demo](https://orthanc.uclouvain.be/demo/)).
-- [Orthanc Explorer 2](https://github.com/orthanc-server/orthanc-explorer-2) - Web interface for browsing, uploading, modifying and sharing studies stored in Orthanc, with links to OHIF, Stone and other viewers.
+- [Orthanc Explorer 2](https://github.com/orthanc-server/orthanc-explorer-2) - Web interface for browsing, uploading, modifying and sharing studies stored in Orthanc, with links to OHIF, Stone and other viewers ([demo](https://orthanc.uclouvain.be/demo/ui/app/)).
 - [Static DICOMweb](https://github.com/RadicalImaging/Static-DICOMWeb) - Command-line tools that convert DICOM files into static DICOMweb files and serve them from disk or the cloud, optimized for the OHIF Viewer.
 
 ### Validation
@@ -289,7 +287,7 @@ Applications and command-line tools to run, grouped by task.
 - [dwv-react](https://github.com/ivmartel/dwv-react) - Medical viewer using DWV and [React](https://react.dev/).
 - [OHIF Viewer](https://github.com/OHIF/Viewers) - Zero-footprint, extensible web viewer from the [Open Health Imaging Foundation](https://ohif.org/) that works with DICOMweb archives ([demo](https://viewer.ohif.org/)).
 - [Slim](https://github.com/ImagingDataCommons/slim) - Web viewer and annotation tool for DICOM whole slide microscopy images served over DICOMweb.
-- [Stone Web Viewer](https://orthanc.uclouvain.be/hg/orthanc-stone/) - WebAssembly viewer from the Orthanc project for studies stored in Orthanc or on any DICOMweb server.
+- [Stone Web Viewer](https://github.com/jodogne/mirror-orthanc-stone) - WebAssembly viewer from the Orthanc project for studies stored in Orthanc or on any DICOMweb server.
 - [VolView](https://github.com/Kitware/VolView) - Web-based radiological viewer built with [Vue.js](https://vuejs.org/) and [VTK.js](https://github.com/Kitware/vtk-js) ([demo](https://volview.kitware.app/)).
 
 ## Related Lists
