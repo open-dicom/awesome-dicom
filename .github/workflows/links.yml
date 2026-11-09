@@ -27,7 +27,8 @@ jobs:
 
       - name: Check links
         id: lychee
-        uses: lycheeverse/lychee-action@v2.9.0
+        # Third-party action in a job that can write issues, so it's pinned to a commit.
+        uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2.9.0
         with:
           args: >-
             --no-progress
