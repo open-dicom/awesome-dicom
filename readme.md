@@ -174,7 +174,6 @@ Packages to use in your own code, grouped by language.
 - [highdicom](https://github.com/ImagingDataCommons/highdicom) - High-level abstractions for creating and reading DICOM objects that hold image-derived information, such as annotations, segmentations and analysis results.
 - [idc-index](https://github.com/ImagingDataCommons/idc-index) - Searches and downloads DICOM data from NCI Imaging Data Commons using a bundled metadata index, without a cloud account.
 - [MONAI Deploy App SDK](https://github.com/Project-MONAI/monai-deploy-app-sdk) - Framework for packaging AI inference pipelines that load DICOM series and write results as DICOM segmentations and structured reports.
-- [PlatiPy](https://github.com/pyplati/platipy) - Medical image processing and analysis toolkit, built mainly for radiation therapy, that converts DICOM images and RT structure sets to and from NIfTI, with auto-segmentation and visualization tools.
 - [pydicom](https://github.com/pydicom/pydicom) - Pure Python package for reading, modifying and writing DICOM files.
 - [pylibjpeg](https://github.com/pydicom/pylibjpeg) - Plugin framework that lets pydicom decode JPEG, JPEG-LS, JPEG 2000, HTJ2K and RLE compressed pixel data.
 - [pynetdicom](https://github.com/pydicom/pynetdicom) - Pure Python implementation of the DICOM networking protocol, used with pydicom to build Service Class Users (SCUs) and Service Class Providers (SCPs).
@@ -244,6 +243,7 @@ Applications and command-line tools to run, grouped by task.
 - [DICOMautomaton](https://github.com/hdclark/DICOMautomaton) - Multipurpose tool for analyzing medical physics data, with a focus on automation.
 - [OnkoDICOM](https://github.com/didymo/OnkoDICOM) - DICOM RT viewer with tools for radiation oncology research.
 - [Plastimatch](https://gitlab.com/plastimatch/plastimatch) - Command-line toolkit for image registration and processing in radiotherapy, which converts DICOM RT structure sets and doses to and from other formats.
+- [PlatiPy](https://github.com/pyplati/platipy) - Python toolkit and command-line tools for medical image processing and analysis, many designed for radiation therapy, including conversion of DICOM images and RT structure sets to and from NIfTI, auto-segmentation and visualization.
 - [SlicerRT](https://github.com/SlicerRt/SlicerRT) - 3D Slicer extension that imports DICOM RT structure sets, doses, plans and images and exports structure sets and doses, with dose analysis, contour analysis and treatment planning tools.
 
 ### Research Platforms
