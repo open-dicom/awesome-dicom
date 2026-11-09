@@ -40,7 +40,7 @@ Free tools that run in the browser, with no installation or account. Their sourc
 
 ## Learning Resources
 
-- [The DICOM Standard](https://www.dicomstandard.org/current) - Current edition of every part of the standard, in PDF, HTML, Word, ODT and XML.
+- [The DICOM Standard](https://www.dicomstandard.org/current) - Current edition of every part of the standard, in PDF, HTML, DOCX, ODT and XML.
 - [DICOM Library](https://www.dicomlibrary.com/) - Free online service for sharing DICOM images and videos for education and research.
 - [DICOM Standard Browser](https://dicom.innolitics.com/ciods) - Browsable tree of the information object definitions, modules and attributes in Part 3 of the standard.
 - [Saga DICOM Standard Browser](https://saga-it.com/dicom/spec) - Cross-linked index of PS3 covering attributes, CIODs, modules, SOP classes, transfer syntaxes and VRs, alongside HL7 v2 and FHIR mapping references.
