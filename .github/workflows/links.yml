@@ -35,8 +35,6 @@ jobs:
             --max-retries 3
             --retry-wait-time 10
             --timeout 30
-            --host-concurrency 2
-            --host-request-interval 1s
             --accept 200..=299,429
             readme.md archive.md contributing.md
           output: lychee-report.md
