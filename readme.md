@@ -22,6 +22,7 @@ The [DICOM Standard](https://www.dicomstandard.org/) defines the formats for med
   - [Java](#java)
   - [JavaScript](#javascript)
   - [Python](#python)
+  - [R](#r)
   - [Rust](#rust)
 - [Tools](#tools)
   - [Conversion](#conversion)
@@ -74,13 +75,15 @@ Packages to use in your own code, grouped by language.
 ### C#
 
 - [fo-dicom](https://github.com/fo-dicom/fo-dicom) - Fellow Oak DICOM, a .NET toolkit for reading, writing, rendering and networking DICOM.
-- [UnityVolumeRendering](https://github.com/mlavik1/UnityVolumeRendering) - Volume renderer for Unity3D that imports DICOM and NRRD datasets.
+- [fo-dicom.Codecs](https://github.com/Efferent-Health/fo-dicom.Codecs) - Native JPEG, JPEG-LS, JPEG 2000 and RLE codecs for fo-dicom on Windows, Linux and macOS.
+- [MingRay (UnityVolumeRendering)](https://github.com/mlavik1/UnityVolumeRendering) - Volume renderer for Unity3D that imports DICOM and NRRD datasets.
 
 ### C and C++
 
 - [CTK](https://github.com/commontk/CTK) - Common Toolkit of support code for medical image analysis and surgical navigation, including Qt widgets for browsing, querying and retrieving DICOM data.
 - [DCMTK](https://github.com/DCMTK/dcmtk) - Libraries and command-line tools for DICOM file handling, networking and image processing.
 - [GDCM](https://github.com/malaterre/GDCM) - Grassroots DICOM, a library for reading, writing and transcoding DICOM files and for DICOM networking, with bindings for Python, C#, Java and PHP.
+- [libdicom](https://github.com/ImagingDataCommons/libdicom) - C library for reading DICOM files, with efficient access to individual frames of whole slide microscopy images.
 - [MITK](https://github.com/MITK/MITK) - Medical Imaging Interaction Toolkit, a framework built on ITK and VTK for developing interactive medical image processing software.
 - [SimpleITK](https://github.com/SimpleITK/SimpleITK) - Simplified interface to the [Insight Toolkit (ITK)](https://itk.org/) for filtering, segmentation and registration, including reading and writing DICOM series.
 - [vtk-dicom](https://github.com/dgobbi/vtk-dicom) - VTK classes for reading and writing DICOM files and metadata, plus utilities for inspecting and converting DICOM files.
@@ -92,10 +95,12 @@ Packages to use in your own code, grouped by language.
 ### Java
 
 - [dcm4che](https://github.com/dcm4che/dcm4che) - DICOM toolkit and library with command-line utilities for file handling and networking.
+- [PixelMed Java DICOM Toolkit](https://www.pixelmed.com/dicomtoolkit.html) - Toolkit and applications for DICOM files and networking, validation, structured reports and de-identification.
 
 ### JavaScript
 
 - [@cosyte/dicom](https://github.com/cosyte/dicom) - Dependency-free DICOM Part 10 parser and serializer for Node.js and TypeScript, built to read metadata from vendor-quirky files without decoding pixel data.
+- [@itk-wasm/dicom](https://github.com/InsightSoftwareConsortium/ITK-Wasm/tree/main/packages/dicom) - WebAssembly builds of DCMTK and GDCM functions for reading DICOM series, tags and encapsulated PDFs, and reading or writing segmentations and RT structure sets, in browsers, Node.js and Python.
 - [Cornerstone3D](https://github.com/cornerstonejs/cornerstone3D) - Libraries for building web-based medical imaging applications, with GPU-accelerated stack, MPR and volume rendering, annotation and segmentation tools, and a DICOM image loader.
 - [dcmjs](https://github.com/dcmjs-org/dcmjs) - Read, write and manipulate DICOM objects, including segmentations and structured reports, in browsers and Node.js.
 - [dcmjs-codecs](https://github.com/PantelisGeorgiadis/dcmjs-codecs) - DICOM file and dataset transcoding for Node.js and browsers using dcmjs.
@@ -113,9 +118,23 @@ Packages to use in your own code, grouped by language.
 ### Python
 
 - [dicomweb-client](https://github.com/ImagingDataCommons/dicomweb-client) - Python client for the DICOMweb services QIDO-RS, WADO-RS and STOW-RS, to search, retrieve and store DICOM objects.
+- [EZ-WSI DICOMweb](https://github.com/GoogleCloudPlatform/EZ-WSI-DICOMweb) - Extracts image patches from DICOM whole slide images stored on a DICOMweb server, for pathology machine learning.
 - [highdicom](https://github.com/ImagingDataCommons/highdicom) - High-level abstractions for creating and reading DICOM objects that hold image-derived information, such as annotations, segmentations and analysis results.
+- [idc-index](https://github.com/ImagingDataCommons/idc-index) - Searches and downloads DICOM data from NCI Imaging Data Commons using a bundled metadata index, without a cloud account.
+- [MONAI Deploy App SDK](https://github.com/Project-MONAI/monai-deploy-app-sdk) - Framework for packaging AI inference pipelines that load DICOM series and write results as DICOM segmentations and structured reports.
+- [PlatiPy](https://github.com/pyplati/platipy) - Radiotherapy imaging toolkit that converts DICOM images and RT structure sets to and from NIfTI, with auto-segmentation and visualization tools.
 - [pydicom](https://github.com/pydicom/pydicom) - Pure Python package for reading, modifying and writing DICOM files.
+- [pylibjpeg](https://github.com/pydicom/pylibjpeg) - Plugin framework that lets pydicom decode JPEG, JPEG-LS, JPEG 2000, HTJ2K and RLE compressed pixel data.
 - [pynetdicom](https://github.com/pydicom/pynetdicom) - Pure Python implementation of the DICOM networking protocol, used with pydicom to build Service Class Users (SCUs) and Service Class Providers (SCPs).
+- [pyorthanc](https://github.com/gacou54/pyorthanc) - Client for the Orthanc REST API, with helpers for finding, anonymizing and downloading patients, studies and series.
+- [python-gdcm](https://github.com/tfmoraes/python-gdcm) - Prebuilt Python wheels of GDCM, which pydicom can use to decode compressed pixel data.
+- [rt-utils](https://github.com/qurit/rt-utils) - Creates DICOM RT structure sets from NumPy masks, and extracts masks from existing ones.
+- [wsidicom](https://github.com/imi-bigpicture/wsidicom) - Reads and writes DICOM whole slide images from disk or DICOMweb, with access to regions, tiles and annotations.
+
+### R
+
+- [divest](https://github.com/jonclayden/divest) - Sorts DICOM files and converts them to NIfTI-compatible images with their metadata, using dcm2niix.
+- [espadon](https://cran.r-project.org/package=espadon) - Reads, processes and exports DICOM and DICOM RT images, structures and doses, with patient-oriented 2D and 3D visualization.
 
 ### Rust
 
