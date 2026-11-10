@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Contribution guidelines
+    url: https://github.com/open-dicom/awesome-dicom/blob/main/contributing.md
+    about: What can be listed, where it goes and how to write an entry.

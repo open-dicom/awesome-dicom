@@ -1,0 +1,61 @@
+name: Staleness check
+
+on:
+  schedule:
+    - cron: "23 6 1 * *" # 06:23 UTC on the first of each month, off the hour, when GitHub delays scheduled runs
+  workflow_dispatch:
+  # Run on pull requests that change the check, to test it. Those runs report in the log
+  # and don't touch issues.
+  pull_request:
+    paths:
+      - .github/workflows/staleness.yml
+      - .github/scripts/find_stale_entries.py
+      - .github/scripts/update_report_issue.sh
+      - .github/staleness-exceptions.txt
+
+permissions:
+  contents: read
+
+env:
+  ISSUE_TITLE: "Staleness check: entries to review"
+
+jobs:
+  find-stale-entries:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Check linked GitHub repositories
+        id: staleness
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          set +e
+          python3 .github/scripts/find_stale_entries.py readme.md staleness-report.md
+          script_exit_code=$?
+          set -e
+          # find_stale_entries.py exits 0 when all is clear and 3 when it found problems.
+          # Anything else, including Python's 1 for an uncaught error, means it failed.
+          case "$script_exit_code" in
+            0) status=passed ;;
+            3) status=found-problems ;;
+            *) status=failed ;;
+          esac
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+
+      - name: Open, update or close the tracking issue
+        # Only runs on main's list update the tracking issue: never pull requests or other branches.
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CHECK_STATUS: ${{ steps.staleness.outputs.status }}
+        run: bash .github/scripts/update_report_issue.sh "$ISSUE_TITLE" staleness-report.md "$CHECK_STATUS"
+
+      - name: Fail the run if the check couldn't finish
+        if: steps.staleness.outputs.status == 'failed'
+        run: exit 1

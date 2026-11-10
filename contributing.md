@@ -51,6 +51,10 @@ If no section fits, add one with the new entry. Add a line for a new `##` or `##
 
 Projects that are archived, deprecated, or have had no commits on their default branch for about two years move to the [archive](archive.md), with the reason and the date. Projects that are widely used and stable rather than abandoned can stay in the list. If an archived project becomes active again, open a pull request to move it back.
 
+## Automated checks
+
+Each pull request that changes the list runs [awesome-lint](https://github.com/sindresorhus/awesome-lint) and checks for duplicated entries and entries out of alphabetical order. A weekly job checks the links, apart from those listed in `.lycheeignore`. A monthly job looks for linked repositories that are archived, moved or inactive. Those two jobs report problems in an issue. GitHub pauses scheduled jobs after 60 days without commits, so a maintainer may need to re-enable them from the repository's Actions tab.
+
 ## Updating your PR
 
 If the maintainers notice anything that we'd like changed, we may ask you to

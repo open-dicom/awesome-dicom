@@ -1,0 +1,6 @@
+# Links the weekly link check skips. Each line is a regular expression matched against the URL.
+#
+# dicom.nema.org resets every connection from GitHub's runners ("Connection reset by peer"),
+# even with two requests at a time a second apart, although its pages load from elsewhere.
+# Check these links by hand when editing the Learning Resources section.
+^https://dicom\.nema\.org/
