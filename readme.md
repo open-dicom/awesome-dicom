@@ -74,6 +74,7 @@ DICOM files can carry protected health information in their tags, pixel data and
 - [DICOM Library](https://www.dicomlibrary.com/) - Service for sharing DICOM studies by link, with sample studies by modality. It anonymizes a fixed set of tags in the browser before uploading, but not burned-in text or other tags.
 - [Medical Connections DICOM Server](https://www.dicomserver.co.uk/) - Public server for testing C-STORE, C-FIND, C-GET, C-MOVE and Modality Worklist, which accepts any AE title. Uploaded files are visible to all users and deleted weekly, and DIMSE traffic is not encrypted, so send only test data.
 - [MiniPACS Free DICOM Viewer](https://minipacs.net/free-dicom-viewer/) - Viewer that decodes JPEG, JPEG-LS, JPEG 2000, RLE and Deflated transfer syntaxes. Files are parsed locally and never uploaded.
+- [Ossidex DICOM Viewer](https://ossidex.com/dicom-viewer) - Viewer for DICOM files, folders and ZIP archives and single-file NIfTI, with 2D, multiplanar reconstruction, oblique planes and slab projections. Files are read locally and never uploaded.
 - [RadRobin](https://radrobin.com) - Client-side viewer with multiplanar and 3D rendering. Opens local files without uploading them, streams from DICOMweb servers, and reads and writes DICOM SR and SEG.
 - [tresD DICOM](https://tresddicom.com) - CBCT viewer with volume rendering presets, panoramic and cephalometric reconstructions, airway views, T0/T1 superimposition and alignment of STL/PLY intraoral scans. Files never leave the computer.
 
