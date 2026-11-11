@@ -1,8 +1,6 @@
 # Contribution Guidelines
 
-Please note that this project is released with a
-[Contributor Code of Conduct](code-of-conduct.md). By participating in this
-project you agree to abide by its terms.
+Please note that this project is released with a [Contributor Code of Conduct](code-of-conduct.md). By participating in this project you agree to abide by its terms.
 
 ---
 
@@ -57,11 +55,6 @@ Each pull request that changes the list runs [awesome-lint](https://github.com/s
 
 ## Updating your PR
 
-If the maintainers notice anything that we'd like changed, we may ask you to
-edit your PR before we merge it, or make small fixes ourselves. There's no
-need to open a new PR, just edit the existing one. If you're not sure how to
-do that,
-[here is a guide](https://github.com/RichardLitt/knowledge/blob/master/github/amending-a-commit-guide.md)
-on the different ways you can update your PR so that we can merge it.
+If the maintainers notice anything that we'd like changed, we may ask you to edit your PR before we merge it, or make small fixes ourselves. There's no need to open a new PR, just edit the existing one. If you're not sure how to do that, [here is a guide](https://github.com/RichardLitt/knowledge/blob/master/github/amending-a-commit-guide.md) on the different ways you can update your PR so that we can merge it.
 
 Thank you for your suggestions!
