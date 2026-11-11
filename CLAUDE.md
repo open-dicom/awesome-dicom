@@ -10,8 +10,9 @@ rules. The only code is the CI under `.github/` (added in #38).
 
 ## Checking the list
 
-- `npx awesome-lint` from the repo root runs the linter. The Lint workflow runs it on every PR that touches the
-  list, with full history (its repo-age rule needs it) and `github_token` (lowercase) for the GitHub API.
+- `npx awesome-lint@2.3.0` from the repo root runs the linter at the version CI pins; a newer version can apply
+  different rules. The Lint workflow runs it on every PR that touches the list, with full history (its repo-age
+  rule needs it) and `github_token` (lowercase) for the GitHub API.
 - `python3 .github/scripts/check_list_structure.py readme.md` checks for duplicated entries and headings and for
   entries out of alphabetical order. Run it after any merge or rebase that touches `readme.md`; the Lint workflow
   runs it too.
@@ -62,12 +63,14 @@ such merge. Run the checks above after merging, and preview a merge with `git me
   - Judgment call already made: innolitics/dicom-standard sits under The Standard although it is a pip package.
 - The Contents list is maintained by hand and covers the `##` sections plus their `###` subsections. A new section
   of either level needs a Contents line. Slugs: C# is `#c`, and C and C++ is `#c-and-c`. The
-  `<!-- omit in toc -->` comments keep the title and Contents heading out of the list.
+  `<!-- omit in toc -->` comments are for editor TOC generators, which would otherwise list the title and the
+  Contents heading; awesome-lint ignores them.
 - Hosted Tools has a privacy note under its intro about PHI and connecting hosted viewers to institutional
   DICOMweb servers. Keep it there.
-- Link every entry straight to its repository. The old `tinyurl.com` workaround for awesome-lint's duplicate-link
-  rule (65db92c) is gone since #35. If that rule fires again, put `<!--lint ignore double-link-->` above the entry
-  rather than adding a redirect.
+- Link every entry directly, never through a redirect: a library or tool to its source code (see Entry rules), and
+  anything else to its own page. The old `tinyurl.com` workaround for awesome-lint's duplicate-link rule (65db92c)
+  is gone since #35. If that rule fires again, put `<!--lint ignore double-link-->` above the entry rather than
+  adding a redirect.
 - DCMTK, GDCM, Orthanc, FSLeyes, Kaapana and Stone Web Viewer link to GitHub mirrors that their maintainers run.
   Their canonical repositories live outside GitHub, and the reviews of #35 and #37 kept the mirrors on purpose, so
   don't switch them. OpenREM and Plastimatch have no GitHub mirror and link GitLab.
