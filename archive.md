@@ -12,6 +12,7 @@ A project moves here when its repository is archived or deprecated, or when its 
 | [dcmrtstruct2nii](https://github.com/Sikerdebaard/dcmrtstruct2nii) | Convert DICOM RT Structure Sets into NIfTI masks. | Inactive. | 2024-02 | 2026-11 |
 | [DICAT](https://github.com/aces/DICAT) | Graphical tool for de-identifying DICOM files on a local workstation. | Inactive on its default branch; recent commits exist only on a project-specific branch, and the last release was in 2019. | 2024-04 | 2026-11 |
 | [DICOMcloud](https://github.com/DICOMcloud/DICOMcloud) | Standalone .NET DICOMweb server implementing QIDO-RS, WADO-RS, STOW-RS and WADO-URI. | Inactive. | 2022-04 | 2026-11 |
+| [Dicomifier](https://github.com/lamyj/dicomifier) | Tools to convert Bruker data to DICOM files, and DICOM files to NIfTI. | Deprecated; its author no longer supports or updates it. | 2025-07 | 2026-11 |
 | [dicom-numpy](https://github.com/innolitics/dicom-numpy) | Utilities for extracting DICOM pixel data into NumPy arrays. | Inactive. | 2023-05 | 2026-11 |
 | [dicompyler](https://github.com/bastula/dicompyler) | Radiation therapy research platform and DICOM RT viewer. | Repository archived. | 2022-02 | 2026-11 |
 | [dicom-server](https://github.com/microsoft/dicom-server) | Microsoft's open source DICOMweb server for Azure. | Microsoft plans to archive it; the main branch now holds only the client, and the server code is in the `archived` branch. | 2024-12 | 2026-11 |

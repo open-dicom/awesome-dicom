@@ -214,7 +214,6 @@ Applications and command-line tools to run, grouped by task.
 - [dicom-ecg-plot](https://github.com/marcodebe/dicom-ecg-plot) - Render 12-lead ECG waveforms from DICOM files to PDF, PNG, SVG and other formats ([demo](https://ecg.galliera.it/)).
 - [dicom2nifti](https://github.com/icometrix/dicom2nifti) - Convert MR and CT-derived DICOM files to NIfTI.
 - [dicom2stl](https://github.com/dave3d/dicom2stl) - Convert a DICOM series to an [STL](<https://en.wikipedia.org/wiki/STL_(file_format)>) surface mesh.
-- [Dicomifier](https://github.com/lamyj/dicomifier) - Tools to convert Bruker data to DICOM files, and DICOM files to NIfTI.
 - [DicomToMesh](https://github.com/eidelen/DicomToMesh) - Command-line tool that turns a DICOM volume into a 3D surface mesh (OBJ, STL or PLY), with optional mesh reduction, smoothing and cleaning.
 - [heudiconv](https://github.com/nipy/heudiconv) - Flexible DICOM converter for organizing brain imaging data into structured directory layouts.
 - [wsidicomizer](https://github.com/imi-bigpicture/wsidicomizer) - Convert proprietary whole slide image formats to DICOM, reusing the original compressed tiles where possible.
