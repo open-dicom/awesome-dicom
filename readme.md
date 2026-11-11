@@ -1,3 +1,10 @@
+<!-- Keep this comment first. awesome-lint reads a centered image that opens the readme as the list's heading, and then reports the title below as a second one. -->
+<div align="center">
+	<a href="https://www.dicomstandard.org/">
+		<img src="media/awesome-dicom.svg" width="400" alt="A stack of medical image slices, the top one showing an axial brain cross-section">
+	</a>
+</div>
+
 <!-- omit in toc -->
 
 # Awesome DICOM [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
