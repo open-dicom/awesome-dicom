@@ -162,7 +162,7 @@ Packages to use in your own code, grouped by language.
 - [@cosyte/dicom](https://github.com/cosyte/dicom) - Dependency-free DICOM Part 10 parser and serializer for Node.js and TypeScript, built to read metadata from vendor-quirky files without decoding pixel data.
 - [@itk-wasm/dicom](https://github.com/InsightSoftwareConsortium/ITK-Wasm/tree/main/packages/dicom/typescript) - WebAssembly builds of DCMTK and GDCM functions for reading DICOM series, tags and encapsulated PDFs, rendering structured reports and applying presentation states, in browsers and Node.js.
 - [Cornerstone3D](https://github.com/cornerstonejs/cornerstone3D) - Libraries for building web-based medical imaging applications, with GPU-accelerated stack, MPR and volume rendering, annotation and segmentation tools, and a DICOM image loader.
-- [dcmjs](https://github.com/dcmjs-org/dcmjs) - Read, write and manipulate DICOM objects, including segmentations and structured reports, in browsers and Node.js.
+- [dcmjs](https://github.com/dcmjs-org/dcmjs) - Reads, writes and manipulates DICOM objects, including segmentations and structured reports, in browsers and Node.js.
 - [dcmjs-codecs](https://github.com/PantelisGeorgiadis/dcmjs-codecs) - DICOM file and dataset transcoding for Node.js and browsers using dcmjs.
 - [dcmjs-dimse](https://github.com/PantelisGeorgiadis/dcmjs-dimse) - DICOM DIMSE implementation for Node.js using dcmjs.
 - [dcmjs-ecg](https://github.com/PantelisGeorgiadis/dcmjs-ecg) - DICOM electrocardiography (ECG) rendering for Node.js and browsers using dcmjs.
@@ -207,17 +207,16 @@ Applications and command-line tools to run, grouped by task.
 - [BIDScoin](https://github.com/Donders-Institute/bidscoin) - Converts DICOM and other neuroimaging source data to BIDS, with a GUI for mapping series to BIDS names.
 - [bidskit](https://github.com/jmtyszka/bidskit) - CLI for converting a directory of DICOM files into a [BIDS](https://bids.neuroimaging.io/)-compliant dataset.
 - [Dcm2Bids](https://github.com/UNFmontreal/Dcm2Bids) - Converts DICOM to a BIDS dataset by running dcm2niix, using a configuration file that maps series metadata to BIDS names.
-- [dcm2niix](https://github.com/rordenlab/dcm2niix) - Convert neuroimaging data from DICOM to [NIfTI](https://nifti.nimh.nih.gov/) ([demo](https://niivue.github.io/niivue-dcm2niix/)).
+- [dcm2niix](https://github.com/rordenlab/dcm2niix) - Converts neuroimaging data from DICOM to [NIfTI](https://nifti.nimh.nih.gov/) ([demo](https://niivue.github.io/niivue-dcm2niix/)).
 - [dcmqi](https://github.com/QIICR/dcmqi) - Libraries and command-line tools for converting quantitative image analysis results, such as segmentations and parametric maps, to and from DICOM.
 - [dcmstack](https://github.com/moloney/dcmstack) - DICOM to NIfTI conversion with the added ability to extract and summarize metadata from the source files.
 - [dicm2nii](https://github.com/xiangruili/dicm2nii) - MATLAB tool that converts DICOM, as well as PAR/XML/REC, HEAD/BRIK, MGZ and BrainVoyager files, to NIfTI.
-- [dicom-ecg-plot](https://github.com/marcodebe/dicom-ecg-plot) - Render 12-lead ECG waveforms from DICOM files to PDF, PNG, SVG and other formats ([demo](https://ecg.galliera.it/)).
-- [dicom2nifti](https://github.com/icometrix/dicom2nifti) - Convert MR and CT-derived DICOM files to NIfTI.
-- [dicom2stl](https://github.com/dave3d/dicom2stl) - Convert a DICOM series to an [STL](<https://en.wikipedia.org/wiki/STL_(file_format)>) surface mesh.
-- [Dicomifier](https://github.com/lamyj/dicomifier) - Tools to convert Bruker data to DICOM files, and DICOM files to NIfTI.
+- [dicom-ecg-plot](https://github.com/marcodebe/dicom-ecg-plot) - Renders 12-lead ECG waveforms from DICOM files to PDF, PNG, SVG and other formats ([demo](https://ecg.galliera.it/)).
+- [dicom2nifti](https://github.com/icometrix/dicom2nifti) - Converts MR and CT-derived DICOM files to NIfTI.
+- [dicom2stl](https://github.com/dave3d/dicom2stl) - Converts a DICOM series to an [STL](<https://en.wikipedia.org/wiki/STL_(file_format)>) surface mesh.
 - [DicomToMesh](https://github.com/eidelen/DicomToMesh) - Command-line tool that turns a DICOM volume into a 3D surface mesh (OBJ, STL or PLY), with optional mesh reduction, smoothing and cleaning.
 - [heudiconv](https://github.com/nipy/heudiconv) - Flexible DICOM converter for organizing brain imaging data into structured directory layouts.
-- [wsidicomizer](https://github.com/imi-bigpicture/wsidicomizer) - Convert proprietary whole slide image formats to DICOM, reusing the original compressed tiles where possible.
+- [wsidicomizer](https://github.com/imi-bigpicture/wsidicomizer) - Converts proprietary whole slide image formats to DICOM, reusing the original compressed tiles where possible.
 
 ### De-identification
 
