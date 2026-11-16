@@ -284,6 +284,7 @@ Applications and command-line tools to run, grouped by task.
 - [FSLeyes](https://github.com/pauldmccarthy/fsleyes) - Cross-platform viewer for NIfTI and DICOM images, from the FSL neuroimaging suite.
 - [Horos](https://github.com/horosproject/horos) - macOS viewer based on OsiriX, with PACS query and retrieve, MPR, volume rendering and plugins.
 - [InVesalius](https://github.com/invesalius/invesalius3) - Reconstructs 3D surfaces from CT and MRI DICOM series, with segmentation, STL export and neuronavigation.
+- [IsiX DICOM Viewer](https://github.com/ThalesMMS/IsiX-DICOM-Viewer-macOS) - macOS viewer forked from Horos, with PACS and DICOMweb query and retrieve, MPR, volume rendering and support for Horos and OsiriX plugins.
 - [MRIcroGL](https://github.com/rordenlab/MRIcroGL) - Cross-platform volume renderer for DICOM, NIfTI and other voxel formats, with a drag-and-drop interface and Python scripting.
 - [Weasis](https://github.com/nroduit/Weasis) - Multipurpose standalone and web-based DICOM viewer with a modular architecture.
 
