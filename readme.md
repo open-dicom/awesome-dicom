@@ -182,6 +182,7 @@ Packages to use in your own code, grouped by language.
 - [highdicom](https://github.com/ImagingDataCommons/highdicom) - High-level abstractions for creating and reading DICOM objects that hold image-derived information, such as annotations, segmentations and analysis results.
 - [idc-index](https://github.com/ImagingDataCommons/idc-index) - Searches and downloads DICOM data from NCI Imaging Data Commons using a bundled metadata index, without a cloud account.
 - [MONAI Deploy App SDK](https://github.com/Project-MONAI/monai-deploy-app-sdk) - Framework for packaging AI inference pipelines that load DICOM series and write results as DICOM segmentations and structured reports.
+- [nalvera](https://github.com/nalvera/nalvera-python) - Client for the Nalvera.AI API that converts DICOM series to NIfTI with dcm2niix on the local computer, removes header text and identifiers, and uploads only the anonymized volume to run CT and MRI segmentation models.
 - [pydicom](https://github.com/pydicom/pydicom) - Pure Python package for reading, modifying and writing DICOM files.
 - [pylibjpeg](https://github.com/pydicom/pylibjpeg) - Plugin framework that lets pydicom decode JPEG, JPEG-LS, JPEG 2000, HTJ2K and RLE compressed pixel data.
 - [pynetdicom](https://github.com/pydicom/pynetdicom) - Pure Python implementation of the DICOM networking protocol, used with pydicom to build Service Class Users (SCUs) and Service Class Providers (SCPs).
